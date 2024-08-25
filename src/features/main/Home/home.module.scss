@@ -1,0 +1,93 @@
+.home {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../assets/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+  }
+
+  .wrapper {
+    text-align: center;
+
+    .fname {
+      margin: 10px 0;
+
+      span{
+        font-size: 3rem;
+        font-weight: bold;
+        background: linear-gradient(rgba(#0013a3, 0.5), rgba(#0013a3, 0.8), rgba(#0013a3, 0.5));
+        background-clip: text;
+        color: transparent;
+      }
+    }
+
+    .position span{
+      font-size: 1.5rem;
+      color: #242424;
+    }
+
+    .contact-link {
+      margin-top: 40px;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        li a {
+          width: 20px;
+          height: 20px;
+          border: 1px solid rgba($color: #000000, $alpha: 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          padding: 6px;
+          transition: 1s;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.facebook {
+  background-color: #0866ff;
+  fill: white;
+
+  &:hover {
+    background-color: #0047ba;
+  }
+}
+
+.github {
+  background-color: #696969;
+  fill: #e6f0ff;
+
+  &:hover {
+    background-color: #4d4d4d;
+  }
+}
+
+.linkedin {
+  background-color: #0a66c2;
+  fill: #ececec;
+
+  &:hover {
+    background-color: #0057af;
+  }
+}

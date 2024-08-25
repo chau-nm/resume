@@ -1,19 +1,44 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import * as path from "common/path";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate, useNavigation } from "react-router-dom";
 import PageNotFound from "../404";
 import Home from "./Home";
-import About from "./About";
+import Summary from "./Summary";
 import { scrollInView } from "common/util";
+import Header from "./Header";
 
 const Main: FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const availablePath = Object.values(path) as string[];
 
   useEffect(() => {
-    const sectionPath = location.pathname.slice(1);
+    let sectionPath = location.pathname.slice(1);
+    if (!sectionPath) sectionPath = "home";
     scrollInView(sectionPath);
-  }, []);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      availablePath.forEach((path) => {
+        const sectionPath = path.slice(1);
+        const element = document.getElementById(sectionPath);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (
+            rect.top >= 0 &&
+            rect.bottom <= window.innerHeight &&
+            location.pathname !== path
+          ) {
+            navigate(path, { replace: true });
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [availablePath, location.pathname, navigate]);
 
   if (!availablePath.includes(location.pathname)) {
     return <PageNotFound />;
@@ -21,8 +46,9 @@ const Main: FC = () => {
 
   return (
     <div className="main">
+      <Header />
       <Home />
-      <About />
+      <Summary />
     </div>
   );
 };
