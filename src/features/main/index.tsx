@@ -6,6 +6,7 @@ import Home from "./Home";
 import Summary from "./Summary";
 import { scrollInView } from "common/util";
 import Header from "./Header";
+import Album from "./Album";
 
 const Main: FC = () => {
   const location = useLocation();
@@ -49,6 +50,7 @@ const Main: FC = () => {
       <Header />
       <Home />
       <Summary />
+      <Album />
     </div>
   );
 };
