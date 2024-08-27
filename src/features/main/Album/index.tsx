@@ -3,6 +3,7 @@ import styles from "./album.module.scss";
 import { AlbumType } from "./type";
 import { AlbumItem } from "./AlbumItem";
 import hutao from "assets/images/image.webp";
+import { AlbumDetailPopup } from "./AlbumDetailPopup";
 
 const albumData: AlbumType[] = [
   {
@@ -36,6 +37,10 @@ const Album: FC = () => {
     setIsCurrentImageIndex(index);
   };
 
+  const handleCloseAlbumDetail = () => {
+    setIsOpennAlbumDetail(false);
+  };
+
   return (
     <div id="album" className={styles.album}>
       <div className={styles.title}>
@@ -53,6 +58,13 @@ const Album: FC = () => {
           );
         })}
       </div>
+      <AlbumDetailPopup
+        visible={isOpenAlbumDetail}
+        handleClose={handleCloseAlbumDetail}
+        albumData={albumData}
+        imageIndex={currentImageIndex}
+        setImageIndex={setIsCurrentImageIndex}
+      />
     </div>
   );
 };

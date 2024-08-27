@@ -1,4 +1,4 @@
-import { FC, ReactNode, ReactSVGElement, useEffect, useState } from "react";
+import { FC, ReactNode, ReactSVG, useEffect, useState } from "react";
 import styles from "./baseModel.module.scss";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
@@ -6,14 +6,13 @@ import Button from "components/Button";
 
 type BaseModelProps = {
   title: string;
-  icon?: ReactSVGElement;
+  icon?: React.SVGProps<SVGElement>;
   visible?: boolean;
   children?: ReactNode;
   handleClose?: () => void;
   footer?: ReactNode[];
   footerAlign?: "left" | "center" | "right";
-  handleCancel?: () => void;
-  handleOk: () => void;
+  handleOk?: () => void;
 };
 
 const BaseModel: FC<BaseModelProps> = ({
@@ -24,7 +23,6 @@ const BaseModel: FC<BaseModelProps> = ({
   handleClose,
   footer,
   footerAlign,
-  handleCancel,
   handleOk,
 }) => {
   const [isOpen, setIsOpen] = useState(visible ?? false);
@@ -41,12 +39,17 @@ const BaseModel: FC<BaseModelProps> = ({
     setIsOpen(visible ?? false);
   }, [visible]);
 
-  const modelClassNames =
-    styles["base-model"] + (isOpen ? styles["base-model-opened"] : "");
+  const modelClassNames = `${styles["base-model"]} ${
+    isOpen ? styles["base-model-opened"] : styles["base-model-closed"]
+  }`;
 
   const defaultFooter: ReactNode[] = [
-    <Button onClick={handleCancel}>Cancel</Button>,
-    <Button onClick={handleOk}>Ok</Button>,
+    <Button key={1} onClick={close}>
+      Cancel
+    </Button>,
+    <Button key={2} onClick={handleOk}>
+      Ok
+    </Button>,
   ];
 
   return (
@@ -61,7 +64,7 @@ const BaseModel: FC<BaseModelProps> = ({
         }
         handleClose={close}
       />
-      {children}
+      <div className={styles.content}>{children}</div>
       <Footer
         footerComponents={footer ?? defaultFooter}
         footerAlign={footerAlign ?? "right"}
