@@ -18,7 +18,7 @@ const Main: FC = () => {
     let sectionPath = section;
     if (!sectionPath) sectionPath = "home";
     scrollInView(sectionPath);
-  }, [section]);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

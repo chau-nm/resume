@@ -1,8 +1,8 @@
-import { FC, ReactNode, ReactSVG, useEffect, useState } from "react";
-import styles from "./baseModel.module.scss";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
 import Button from "components/Button";
+import { FC, ReactNode, useEffect, useState } from "react";
+import styles from "./baseModel.module.scss";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 type BaseModelProps = {
   title: string;
