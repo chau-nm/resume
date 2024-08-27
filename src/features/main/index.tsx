@@ -1,23 +1,24 @@
-import { FC, useEffect, useState } from "react";
 import * as path from "common/path";
-import { useLocation, useNavigate, useNavigation } from "react-router-dom";
+import { scrollInView } from "common/util";
+import { FC, useEffect } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import PageNotFound from "../404";
+import Album from "./Album";
+import Header from "./Header";
 import Home from "./Home";
 import Summary from "./Summary";
-import { scrollInView } from "common/util";
-import Header from "./Header";
-import Album from "./Album";
 
 const Main: FC = () => {
+  const { section } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
   const availablePath = Object.values(path) as string[];
 
   useEffect(() => {
-    let sectionPath = location.pathname.slice(1);
+    let sectionPath = section;
     if (!sectionPath) sectionPath = "home";
     scrollInView(sectionPath);
-  }, [location.pathname]);
+  }, [section]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +30,7 @@ const Main: FC = () => {
           if (
             rect.top >= 0 &&
             rect.bottom <= window.innerHeight &&
-            location.pathname !== path
+            section !== path
           ) {
             navigate(path, { replace: true });
           }
@@ -39,7 +40,7 @@ const Main: FC = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [availablePath, location.pathname, navigate]);
+  }, [availablePath, section, navigate]);
 
   if (!availablePath.includes(location.pathname)) {
     return <PageNotFound />;
