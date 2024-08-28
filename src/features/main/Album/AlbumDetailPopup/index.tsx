@@ -2,7 +2,9 @@ import { CircleInfoOutline } from "assets/icons";
 import BaseModel from "components/BaseModel";
 import Button from "components/Button";
 import { FC, ReactNode } from "react";
-import { AlbumType } from "./type";
+import { AlbumType } from "../type";
+import { AlbumDetail } from "./AlbumDetail";
+import { AlbumList } from "./AlbumList";
 
 type AlbumDetailPopupProps = {
   visible: boolean;
@@ -15,6 +17,9 @@ type AlbumDetailPopupProps = {
 export const AlbumDetailPopup: FC<AlbumDetailPopupProps> = ({
   visible,
   handleClose,
+  albumData,
+  imageIndex,
+  setImageIndex,
 }) => {
   const footer: ReactNode[] = [
     <Button key={1} onClick={handleClose}>
@@ -29,7 +34,8 @@ export const AlbumDetailPopup: FC<AlbumDetailPopupProps> = ({
       footer={footer}
       icon={<CircleInfoOutline />}
     >
-      Album detail
+      <AlbumDetail album={albumData[imageIndex]} />
+      <AlbumList albumData={albumData} setImageIndex={setImageIndex} />
     </BaseModel>
   );
 };
