@@ -5,6 +5,7 @@ import { FC, ReactNode } from "react";
 import { AlbumType } from "../type";
 import { AlbumDetail } from "./AlbumDetail";
 import { AlbumList } from "./AlbumList";
+import styles from "./albumDetailPopup.module.scss";
 
 type AlbumDetailPopupProps = {
   visible: boolean;
@@ -29,13 +30,19 @@ export const AlbumDetailPopup: FC<AlbumDetailPopupProps> = ({
   return (
     <BaseModel
       title="Album detail"
+      className={styles["album-detal-popup"]}
+      contentClassName={styles["album-detal-popup-content"]}
       visible={visible}
       handleClose={handleClose}
       footer={footer}
       icon={<CircleInfoOutline />}
     >
       <AlbumDetail album={albumData[imageIndex]} />
-      <AlbumList albumData={albumData} setImageIndex={setImageIndex} />
+      <AlbumList
+        albumData={albumData}
+        imageIndex={imageIndex}
+        setImageIndex={setImageIndex}
+      />
     </BaseModel>
   );
 };

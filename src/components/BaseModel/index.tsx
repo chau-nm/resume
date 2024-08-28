@@ -5,6 +5,8 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 type BaseModelProps = {
+  className?: string;
+  contentClassName?: string;
   title: string;
   icon?: React.SVGProps<SVGElement>;
   visible?: boolean;
@@ -16,6 +18,8 @@ type BaseModelProps = {
 };
 
 const BaseModel: FC<BaseModelProps> = ({
+  className = "",
+  contentClassName = "",
   title,
   icon,
   children,
@@ -41,7 +45,7 @@ const BaseModel: FC<BaseModelProps> = ({
 
   const modelClassNames = `${styles["base-model"]} ${
     isOpen ? styles["base-model-opened"] : styles["base-model-closed"]
-  }`;
+  } ${className}`;
 
   const defaultFooter: ReactNode[] = [
     <Button key={1} onClick={close}>
@@ -53,23 +57,28 @@ const BaseModel: FC<BaseModelProps> = ({
   ];
 
   return (
-    <div className={modelClassNames}>
-      <Header
-        title={
-          <>
-            {icon}
-            {""}
-            {title}
-          </>
-        }
-        handleClose={close}
-      />
-      <div className={styles.content}>{children}</div>
-      <Footer
-        footerComponents={footer ?? defaultFooter}
-        footerAlign={footerAlign ?? "right"}
-      />
-    </div>
+    <>
+      <div className={modelClassNames}>
+        <Header
+          title={
+            <>
+              {icon}
+              {""}
+              {title}
+            </>
+          }
+          handleClose={close}
+        />
+        <div className={`${styles.content} ${contentClassName}`}>
+          {children}
+        </div>
+        <Footer
+          footerComponents={footer ?? defaultFooter}
+          footerAlign={footerAlign ?? "right"}
+        />
+      </div>
+      <div className={styles.background}></div>
+    </>
   );
 };
 

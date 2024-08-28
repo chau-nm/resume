@@ -3,6 +3,7 @@ import styles from "./album.module.scss";
 import { AlbumType } from "./type";
 import { AlbumItem } from "./AlbumItem";
 import hutao from "assets/images/image.webp";
+import img from "assets/images/background.jpg";
 import { AlbumDetailPopup } from "./AlbumDetailPopup";
 
 const albumData: AlbumType[] = [
@@ -12,7 +13,7 @@ const albumData: AlbumType[] = [
   },
   {
     title: "Hutao",
-    src: hutao,
+    src: img,
   },
   {
     title: "Hutao",
