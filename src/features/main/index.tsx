@@ -1,23 +1,35 @@
 import * as path from "common/path";
 import { scrollInView } from "common/util";
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import PageNotFound from "../404";
 import Album from "./Album";
 import Header from "./Header";
 import Home from "./Home";
 import Summary from "./Summary";
+import ScrollTopButton from "components/ScrollTopButton";
 
 const Main: FC = () => {
   const { section } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
   const availablePath = Object.values(path) as string[];
+  const [isVisibleScollTop, setIsVisibleScrollTop] = useState(false);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (window.scrollY > 100) {
+      if (!isVisibleScollTop) setIsVisibleScrollTop(true);
+    } else {
+      if (isVisibleScollTop) setIsVisibleScrollTop(false);
+    }
+  });
 
   useEffect(() => {
     let sectionPath = section;
     if (!sectionPath) sectionPath = "home";
     scrollInView(sectionPath);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -52,6 +64,7 @@ const Main: FC = () => {
       <Home />
       <Summary />
       <Album />
+      {isVisibleScollTop && <ScrollTopButton />}
     </div>
   );
 };
