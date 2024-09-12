@@ -33,8 +33,8 @@ export const StepContentFrame: FC<StepContentFrameProps> = ({
           <strong>Technical:</strong>
         </label>
         <ul className={styles["technicals"]}>
-          {technicalLogoUrls.map((logo) => (
-            <li className={styles["technical-item"]}>
+          {technicalLogoUrls.map((logo, index) => (
+            <li key={index} className={styles["technical-item"]}>
               <img src={logo} alt="" />
             </li>
           ))}

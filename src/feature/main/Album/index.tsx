@@ -5,6 +5,7 @@ import { AlbumItem } from "./AlbumItem";
 import hutao from "assets/images/image.webp";
 import img from "assets/images/background.jpg";
 import { AlbumDetailPopup } from "./AlbumDetailPopup";
+import classNames from "classnames";
 
 const albumData: AlbumType[] = [
   {
@@ -43,7 +44,7 @@ const Album: FC = () => {
   };
 
   return (
-    <div id="album" className={styles.album}>
+    <div id="album" className={classNames("section", styles.album)}>
       <div className={styles.title}>
         <h3>ALBUM</h3>
       </div>

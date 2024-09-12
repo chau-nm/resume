@@ -1,10 +1,11 @@
 import { FC } from "react";
 import styles from "./summary.module.scss";
 import Button from "component/Button";
+import classNames from "classnames";
 
 const Summary: FC = () => {
   return (
-    <div id="summary" className={styles.summary}>
+    <div id="summary" className={classNames("section", styles.summary)}>
       <div className={styles.title}>
         <h3>SUMMARY</h3>
       </div>

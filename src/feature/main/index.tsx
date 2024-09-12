@@ -9,6 +9,7 @@ import Home from "./Home";
 import Summary from "./Summary";
 import ScrollTopButton from "component/ScrollTopButton";
 import Experience from "./Experience";
+import "./main.scss";
 
 const Main: FC = () => {
   const { section } = useParams();

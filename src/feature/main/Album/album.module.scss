@@ -1,15 +1,6 @@
 .album {
   position: relative;
-  padding: 20px 20%;
   text-align: center;
-
-  & > * {
-    margin: 20px 0;
-  }
-
-  .title h3 {
-      font-size: 3rem;
-  }
 
   .album-items {
     display: flex;

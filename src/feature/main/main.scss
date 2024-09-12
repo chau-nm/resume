@@ -1,0 +1,13 @@
+.section {
+  padding: 20px 20%;
+
+  & > * {
+    margin: 20px 0;
+  }
+
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
