@@ -24,10 +24,14 @@
 
         .dot {
           position: relative;
-          width: 20px;
-          height: 20px;
-          background-color: blue;
+          width: 15px;
+          height: 15px;
           border-radius: 50%;
+          cursor: pointer;
+          background-color: rgba($color: blue, $alpha: 0.9);
+          box-shadow: 
+            3px 3px 10px rgba($color: blue, $alpha: 0.6),
+            -3px -3px 10px rgba($color: blue, $alpha: 0.6);
 
           &-title {
             position: absolute;
@@ -39,6 +43,7 @@
             left: 50%;
             transform: translateX(-50%);
             visibility: hidden;
+            opacity: 0;
 
             &::before {
               content: "";
@@ -53,14 +58,29 @@
           }
 
           &:hover .dot-title {
-            visibility: visible;
+            animation: dotTitleDisplay 0.6s ease-out forwards; 
+          }
+
+          @keyframes dotTitleDisplay {
+            from {
+              top: -40px;
+              transform: translateX(-50%) scale(0);
+              visibility: hidden;
+              opacity: 0;
+            }
+            to {
+              top: -50px;
+              transform: translateX(-50%) scale(1);
+              visibility: visible;
+              opacity: 1;
+            }
           }
         }
 
         .line {
-          width: 3px;
+          width: 2px;
           height: 100%;
-          background-color: blue;
+          background-color: rgba($color: blue, $alpha: 0.6);
         }
       }
 
@@ -73,7 +93,7 @@
 
           .field {
             display: flex;
-            margin: 10px 0;
+            margin: 20px 0;
 
             label {
               width: 200px;

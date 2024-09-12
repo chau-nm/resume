@@ -26,7 +26,7 @@ export const StepContentFrame: FC<StepContentFrameProps> = ({
         <label>
           <strong>Summary:</strong>
         </label>{" "}
-        {summary}
+        <i>{summary}</i>
       </div>
       <div className={styles.field}>
         <label>
