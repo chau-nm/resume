@@ -1,4 +1,9 @@
 export type ExperienceSectionStepType = {
-  time: string;
-  content: React.ReactNode;
+  dotTitle: string;
+  content: string | React.ReactNode;
+}
+
+export type ExperienceSectionType = {
+  title: String;
+  stepData: ExperienceSectionStepType[]
 }
