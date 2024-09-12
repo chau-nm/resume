@@ -4,7 +4,7 @@ import {
   PROJECT,
   HOME,
   SUMMARY,
-} from "features/main/sections";
+} from "feature/main/sections";
 import { FC } from "react";
 import styles from "./header.module.scss";
 import { Link } from "react-scroll";

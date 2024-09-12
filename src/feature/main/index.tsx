@@ -1,5 +1,5 @@
 import * as path from "common/path";
-import { scrollInView } from "common/util";
+import { isInView, scrollInView } from "common/util";
 import { FC, useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import PageNotFound from "../404";
@@ -7,7 +7,8 @@ import Album from "./Album";
 import Header from "./Header";
 import Home from "./Home";
 import Summary from "./Summary";
-import ScrollTopButton from "components/ScrollTopButton";
+import ScrollTopButton from "component/ScrollTopButton";
+import Experience from "./Experience";
 
 const Main: FC = () => {
   const { section } = useParams();
@@ -28,6 +29,10 @@ const Main: FC = () => {
   useEffect(() => {
     let sectionPath = section;
     if (!sectionPath) sectionPath = "home";
+    const element = document.getElementById(sectionPath);
+    if (isInView(element)) {
+      return;
+    }
     scrollInView(sectionPath);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -37,15 +42,8 @@ const Main: FC = () => {
       availablePath.forEach((path) => {
         const sectionPath = path.slice(1);
         const element = document.getElementById(sectionPath);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (
-            rect.top >= 0 &&
-            rect.bottom <= window.innerHeight &&
-            section !== path
-          ) {
-            navigate(path, { replace: true });
-          }
+        if (isInView(element) && section !== path) {
+          navigate(path, { replace: true });
         }
       });
     };
@@ -64,6 +62,7 @@ const Main: FC = () => {
       <Home />
       <Summary />
       <Album />
+      <Experience />
       {isVisibleScollTop && <ScrollTopButton />}
     </div>
   );

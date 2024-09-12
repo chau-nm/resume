@@ -1,6 +1,6 @@
 import { CircleInfoOutline } from "assets/icons";
-import BaseModel from "components/BaseModel";
-import Button from "components/Button";
+import BaseModel from "component/BaseModel";
+import Button from "component/Button";
 import { FC, ReactNode } from "react";
 import { AlbumType } from "../type";
 import { AlbumDetail } from "./AlbumDetail";

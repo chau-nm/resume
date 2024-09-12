@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styles from "./home.module.scss";
 import { ContactLinnk } from "./ContactLink";
-import NextSectionButton from "components/NextSectionButton";
+import NextSectionButton from "component/NextSectionButton";
 
 const Home: FC = () => {
   return (

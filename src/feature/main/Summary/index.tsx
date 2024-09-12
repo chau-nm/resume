@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./summary.module.scss";
-import Button from "components/Button";
+import Button from "component/Button";
 
 const Summary: FC = () => {
   return (

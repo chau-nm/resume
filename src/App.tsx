@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
-import Main from "./features/main";
-import PageNotFound from "./features/404";
+import Main from "./feature/main";
+import PageNotFound from "./feature/404";
 
 const App: FC = () => {
   return (

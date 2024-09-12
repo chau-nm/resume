@@ -1,4 +1,4 @@
-import Button from "components/Button";
+import Button from "component/Button";
 import { FC, ReactNode, useEffect, useState } from "react";
 import styles from "./baseModel.module.scss";
 import { Footer } from "./Footer";
