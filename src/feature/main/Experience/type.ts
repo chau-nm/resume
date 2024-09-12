@@ -1,9 +1,11 @@
+import { ReactNode } from "react";
+
 export type ExperienceSectionStepType = {
   dotTitle: string;
   content: string | React.ReactNode;
 }
 
 export type ExperienceSectionType = {
-  title: String;
+  title: string | ReactNode;
   stepData: ExperienceSectionStepType[]
 }

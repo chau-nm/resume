@@ -16,9 +16,22 @@ export const StepContentFrame: FC<StepContentFrameProps> = ({
 }) => {
   return (
     <div className={styles["step-content"]}>
-      <div className={styles["project-name"]}>{projectName}</div>
-      <div className={styles["summary"]}>{summary}</div>
-      <div className={styles["technicals-wrapper"]}>
+      <div className={styles.field}>
+        <label>
+          <strong>Project name:</strong>
+        </label>{" "}
+        {projectName}
+      </div>
+      <div className={styles.field}>
+        <label>
+          <strong>Summary:</strong>
+        </label>{" "}
+        {summary}
+      </div>
+      <div className={styles.field}>
+        <label>
+          <strong>Technical:</strong>
+        </label>
         <ul className={styles["technicals"]}>
           {technicalLogoUrls.map((logo) => (
             <li className={styles["technical-item"]}>
@@ -27,7 +40,7 @@ export const StepContentFrame: FC<StepContentFrameProps> = ({
           ))}
         </ul>
       </div>
-      <div className={styles["description"]}>{description}</div>
+      <div className={styles.field}>{description}</div>
     </div>
   );
 };
