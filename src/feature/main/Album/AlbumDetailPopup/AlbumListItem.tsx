@@ -13,15 +13,13 @@ export const AlbumListItem: FC<AlbumListItemProps> = ({
   alt,
   isActive,
   handleChoose,
-}) => {
-  return (
-    <div
-      className={`${styles["album-list-item"]} ${
-        isActive ? styles["active"] : ""
-      }`}
-      onClick={handleChoose}
-    >
-      <img src={src} alt={alt} />
-    </div>
-  );
-};
+}) => (
+  <div
+    className={`${styles["album-list-item"]} ${
+      isActive ? styles["active"] : ""
+    }`}
+    onClick={handleChoose}
+  >
+    <img src={src} alt={alt} />
+  </div>
+);

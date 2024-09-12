@@ -8,19 +8,17 @@ type SectionProps = {
   stepData: ExperienceSectionStepType[];
 };
 
-const Section: FC<SectionProps> = ({ title, stepData }) => {
-  return (
-    <div className={styles.section}>
-      <div className={styles["section-title"]}>{title}</div>
-      <div className={styles["section-content"]}>
-        {stepData.map((data, index) => (
-          <Step key={index} dotTitle={data.dotTitle}>
-            {data.content}
-          </Step>
-        ))}
-      </div>
+const Section: FC<SectionProps> = ({ title, stepData }) => (
+  <div className={styles.section}>
+    <div className={styles["section-title"]}>{title}</div>
+    <div className={styles["section-content"]}>
+      {stepData.map((data, index) => (
+        <Step key={index} dotTitle={data.dotTitle}>
+          {data.content}
+        </Step>
+      ))}
     </div>
-  );
-};
+  </div>
+);
 
 export default Section;

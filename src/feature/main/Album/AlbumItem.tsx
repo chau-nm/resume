@@ -11,10 +11,8 @@ export const AlbumItem: FC<AlbumItemProps> = ({
   src,
   alt,
   handleOpenAlbumDetail,
-}) => {
-  return (
-    <div className={styles["album-item"]} onClick={handleOpenAlbumDetail}>
-      <img src={src} alt={alt} />
-    </div>
-  );
-};
+}) => (
+  <div className={styles["album-item"]} onClick={handleOpenAlbumDetail}>
+    <img src={src} alt={alt} />
+  </div>
+);

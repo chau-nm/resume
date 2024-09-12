@@ -13,18 +13,16 @@ export const AlbumList: FC<AlbumListProps> = ({
   albumData,
   imageIndex,
   setImageIndex,
-}) => {
-  return (
-    <div className={styles["album-list"]}>
-      {albumData.map((album, index) => (
-        <AlbumListItem
-          key={index}
-          src={album.src}
-          alt={album.title}
-          isActive={imageIndex === index}
-          handleChoose={() => setImageIndex(index)}
-        />
-      ))}
-    </div>
-  );
-};
+}) => (
+  <div className={styles["album-list"]}>
+    {albumData.map((album, index) => (
+      <AlbumListItem
+        key={index}
+        src={album.src}
+        alt={album.title}
+        isActive={imageIndex === index}
+        handleChoose={() => setImageIndex(index)}
+      />
+    ))}
+  </div>
+);
