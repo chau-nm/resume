@@ -25,7 +25,7 @@
       }
 
       &.item-previous {
-        transform: translate3d(-100%, 15%, -100px) scale(0.3);
+        transform: translate3d(-95%, 15%, -100px) scale(0.3);
         opacity: .5;
         z-index: 1;
       }
@@ -35,7 +35,7 @@
       }
 
       &.item-next {
-        transform: translate3d(0, 15%, -100px) scale(0.3);
+        transform: translate3d(-5%, 15%, -100px) scale(0.3);
         opacity: .5;
         z-index: 1;
       }
