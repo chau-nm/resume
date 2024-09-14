@@ -10,6 +10,7 @@ export { default as PythonLogo } from "./python.png";
 export { default as PhpLogo } from "./php.png";
 
 export { default as ReactLogo } from "./react.png";
+export { default as ReactNativeLogo } from "./react-native.png";
 export { default as NextJSLogo } from "./nextjs.png";
 export { default as NestJSLogo } from "./nest.png";
 export { default as Yii2Logo } from "./yii2.png";

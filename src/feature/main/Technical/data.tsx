@@ -11,6 +11,7 @@ import {
   PostgreLogo,
   PythonLogo,
   ReactLogo,
+  ReactNativeLogo,
   RedisLogo,
   SamlLogo,
   SpringLogo,
@@ -21,7 +22,7 @@ import {
 export const technicalData = [
   [HTMLLogo, CSSLogo, JavaScriptLogo, TypeScriptLogo],
   [JavaLogo, PhpLogo, PythonLogo],
-  [ReactLogo, NextJSLogo, NestJSLogo, SpringLogo, Yii2Logo],
+  [ReactLogo, ReactNativeLogo, NextJSLogo, NestJSLogo, SpringLogo, Yii2Logo],
   [MySQLLogo, PostgreLogo],
   [RedisLogo, FirebaseLogo, SamlLogo],
 ];
