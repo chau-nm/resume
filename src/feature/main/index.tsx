@@ -11,7 +11,7 @@ import ScrollTopButton from "component/ScrollTopButton";
 import Experience from "./Experience";
 import "./main.scss";
 import Technical from "./Technical";
-import Project from "./Project";
+import Repository from "./Repository";
 
 const Main: FC = () => {
   const { section } = useParams();
@@ -67,7 +67,7 @@ const Main: FC = () => {
       <Album />
       <Technical />
       <Experience />
-      <Project />
+      <Repository />
       {isVisibleScollTop && <ScrollTopButton />}
     </div>
   );

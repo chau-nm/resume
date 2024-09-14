@@ -1,9 +1,9 @@
 import {
   ALBUM,
   EXPERIENCE,
-  PROJECT,
   HOME,
   SUMMARY,
+  REPOSITORY,
 } from "feature/main/sections";
 import { FC } from "react";
 import styles from "./header.module.scss";
@@ -34,8 +34,8 @@ export const Menu: FC = () => {
           </Link>
         </li>
         <li>
-          <Link to={PROJECT} smooth duration={500}>
-            Peronal project
+          <Link to={REPOSITORY} smooth duration={500}>
+            Repository
           </Link>
         </li>
       </ul>
