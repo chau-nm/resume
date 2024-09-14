@@ -11,9 +11,9 @@ export const TechnicalRow: FC<TechnicalRowProps> = ({
   return (
     <div className={styles["technical-row"]}>
       <ul>
-        {technicalDataSource.map((source) => {
+        {technicalDataSource.map((source, index) => {
           return (
-            <li>
+            <li key={index}>
               <img src={source} alt="" />
             </li>
           );

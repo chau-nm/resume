@@ -11,8 +11,8 @@ const Technical: FC = () => {
       title="TECHNICAL"
       className={styles.technical}
     >
-      {technicalData.map((technicalRow) => {
-        return <TechnicalRow technicalDataSource={technicalRow} />;
+      {technicalData.map((technicalRow, index) => {
+        return <TechnicalRow key={index} technicalDataSource={technicalRow} />;
       })}
     </SectionWrapper>
   );

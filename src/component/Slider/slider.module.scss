@@ -1,0 +1,107 @@
+.slider {
+  position: relative;
+  min-height: 500px;
+  margin: 100px 0;
+  
+  &-content {
+    transform-style: preserve-3d;
+
+    .slider-item-wrapper {
+      position: absolute;
+      will-change: transform;
+      box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.2);
+      width: 80%;
+      min-height: 460px;
+      border-radius: 5px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, 0) ;
+      transition: all .5s;
+
+      &.item-previous {
+        transform: translate3d(-100%, 15%, -100px) scale(0.3);
+        opacity: .5;
+        z-index: 1;
+      }
+
+      &.item-current {
+        z-index: 3;
+      }
+
+      &.item-next {
+        transform: translate3d(0, 15%, -100px) scale(0.3);
+        opacity: .5;
+        z-index: 1;
+      }
+
+      &.item-previous:hover, &.item-next:hover {
+        cursor: pointer;
+        border-style: groove;
+        border-width: 6px;
+        border-color: rgba($color: blue, $alpha: 0.3);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .previous-button {
+    left: 10px;
+
+    &:hover {
+      transform: translate(5px, -50%);
+      opacity: .5;
+    }
+  }
+
+  .next-button {
+    right: 10px;
+
+    &:hover {
+      transform: translate(-5px, -50%);
+      opacity: .5;
+    }
+  }
+
+  .previous-button, .next-button {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 85);
+    transition: all .3s;
+    cursor: pointer;
+
+    svg {
+      width: 100px;
+      height: 50px;
+    }
+  }
+
+  .indicator {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 18px;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #c3c3c3;
+      border-radius: 50%;
+      box-shadow: 
+        2px 2px 8px rgba($color: #000000, $alpha: 0.2);
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #737373;
+      }
+
+      &.dot-active {
+        background-color: #5d5d5d;
+      }
+    }
+  }
+}
