@@ -8,7 +8,6 @@
 
     .slider-item-wrapper {
       position: absolute;
-      will-change: transform;
       box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.2);
       width: 80%;
       height: 460px;
@@ -16,8 +15,10 @@
       left: 50%;
       top: 50%;
       overflow: hidden;
-      transform: translate(-50%, 0) ;
+      transform: translate3d(-50%, 0, -200px) scale(0.2);
+      opacity: 0;
       transition: all .5s;
+      z-index: 0;
 
       & > * {
         width: 100%;
@@ -31,6 +32,8 @@
       }
 
       &.item-current {
+        transform: translate3d(-50%, 0, 0);
+        opacity: 1;
         z-index: 3;
       }
 
