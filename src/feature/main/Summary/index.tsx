@@ -1,13 +1,14 @@
 import { FC } from "react";
 import styles from "./summary.module.scss";
 import Button from "component/Button";
-import classNames from "classnames";
+import { SectionWrapper } from "../SectionWrapper";
 
 const Summary: FC = () => (
-  <div id="summary" className={classNames("section", styles.summary)}>
-    <div className={styles.title}>
-      <h3>SUMMARY</h3>
-    </div>
+  <SectionWrapper
+    sectionId="summary"
+    title="SUMMARY"
+    className={styles.summary}
+  >
     <div className={styles.content}>
       <p>
         Hi, I'm Nguyen Minh Chau. I'm a Software Engineer with 2 years of
@@ -20,7 +21,7 @@ const Summary: FC = () => (
     <div className={styles.viewCVButton}>
       <Button>View CV</Button>
     </div>
-  </div>
+  </SectionWrapper>
 );
 
 export default Summary;

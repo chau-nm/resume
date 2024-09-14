@@ -5,7 +5,7 @@ import { AlbumItem } from "./AlbumItem";
 import hutao from "assets/images/image.webp";
 import img from "assets/images/background.jpg";
 import { AlbumDetailPopup } from "./AlbumDetailPopup";
-import classNames from "classnames";
+import { SectionWrapper } from "../SectionWrapper";
 
 const albumData: AlbumType[] = [
   {
@@ -44,10 +44,7 @@ const Album: FC = () => {
   };
 
   return (
-    <div id="album" className={classNames("section", styles.album)}>
-      <div className={styles.title}>
-        <h3>ALBUM</h3>
-      </div>
+    <SectionWrapper sectionId="album" title="ALBUM" className={styles.album}>
       <div className={styles["album-items"]}>
         {albumData.map((data, index) => {
           return (
@@ -67,7 +64,7 @@ const Album: FC = () => {
         imageIndex={currentImageIndex}
         setImageIndex={setIsCurrentImageIndex}
       />
-    </div>
+    </SectionWrapper>
   );
 };
 

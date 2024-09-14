@@ -1,18 +1,19 @@
 import { FC } from "react";
+import { SectionWrapper } from "../SectionWrapper";
 import Section from "./Section";
 import { experienceData as data } from "./data";
 import styles from "./experience.module.scss";
-import classNames from "classnames";
 
 const Experience: FC = () => (
-  <div id="experience" className={classNames("section", styles.experience)}>
-    <div className={styles.title}>
-      <h3>Experience</h3>
-    </div>
+  <SectionWrapper
+    sectionId="experience"
+    title="Experience"
+    className={styles.experience}
+  >
     {data.map((record, index) => (
       <Section key={index} title={record.title} stepData={record.stepData} />
     ))}
-  </div>
+  </SectionWrapper>
 );
 
 export default Experience;
