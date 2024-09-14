@@ -12,6 +12,7 @@ import Experience from "./Experience";
 import "./main.scss";
 import Technical from "./Technical";
 import Repository from "./Repository";
+import Footer from "./Footer";
 
 const Main: FC = () => {
   const { section } = useParams();
@@ -68,6 +69,7 @@ const Main: FC = () => {
       <Technical />
       <Experience />
       <Repository />
+      <Footer />
       {isVisibleScollTop && <ScrollTopButton />}
     </div>
   );

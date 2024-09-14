@@ -1,8 +1,8 @@
 import { FC } from "react";
-import styles from "./home.module.scss";
+import styles from "./footer.module.scss";
 import { FacebookOutLine, GithubOutLine, LinkedInOutline } from "assets/icons";
 
-export const ContactLinnk: FC = () => (
+export const ContactLink: FC = () => (
   <div className={styles["contact-link"]}>
     <ul>
       <li>

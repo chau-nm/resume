@@ -1,0 +1,26 @@
+.facebook {
+  background-color: #0866ff;
+  fill: white;
+
+  &:hover {
+    background-color: #0047ba;
+  }
+}
+
+.github {
+  background-color: #696969;
+  fill: #e6f0ff;
+
+  &:hover {
+    background-color: #4d4d4d;
+  }
+}
+
+.linkedin {
+  background-color: #0a66c2;
+  fill: #ececec;
+
+  &:hover {
+    background-color: #0057af;
+  }
+}

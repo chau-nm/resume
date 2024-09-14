@@ -24,8 +24,8 @@ export const UIProblem: FC = () => {
           </li>
           <li className={styles["field"]}>
             <label>Technical: </label>{" "}
-            {technicalUrls.map((url) => (
-              <img src={url} alt="" />
+            {technicalUrls.map((url, index) => (
+              <img key={index} src={url} alt="" />
             ))}
           </li>
           <li className={styles["field"]}>

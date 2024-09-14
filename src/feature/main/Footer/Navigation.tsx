@@ -1,16 +1,11 @@
-import {
-  ALBUM,
-  EXPERIENCE,
-  HOME,
-  SUMMARY,
-  REPOSITORY,
-} from "feature/main/sections";
 import { FC } from "react";
-import styles from "./header.module.scss";
+import styles from "./footer.module.scss";
 import { Link } from "react-scroll";
+import { ALBUM, EXPERIENCE, HOME, REPOSITORY, SUMMARY } from "../sections";
 
-export const Menu: FC = () => (
-  <div className={styles.menu}>
+export const Navigation: FC = () => (
+  <>
+    <div className={styles["title"]}>Navigation</div>
     <ul>
       <li>
         <Link to={HOME} smooth duration={500}>
@@ -38,5 +33,5 @@ export const Menu: FC = () => (
         </Link>
       </li>
     </ul>
-  </div>
+  </>
 );

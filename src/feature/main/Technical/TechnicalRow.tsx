@@ -7,18 +7,16 @@ type TechnicalRowProps = {
 
 export const TechnicalRow: FC<TechnicalRowProps> = ({
   technicalDataSource,
-}) => {
-  return (
-    <div className={styles["technical-row"]}>
-      <ul>
-        {technicalDataSource.map((source, index) => {
-          return (
-            <li key={index}>
-              <img src={source} alt="" />
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-};
+}) => (
+  <div className={styles["technical-row"]}>
+    <ul>
+      {technicalDataSource.map((source, index) => {
+        return (
+          <li key={index}>
+            <img src={source} alt="" />
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+);

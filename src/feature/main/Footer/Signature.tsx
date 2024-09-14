@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./header.module.scss";
+import styles from "./footer.module.scss";
 import { Link } from "react-scroll";
 import { HOME } from "../sections";
 
