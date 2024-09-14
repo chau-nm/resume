@@ -1,5 +1,7 @@
 export { default as FujinetLogo } from "./fujinet.jpg";
 
+export { default as LeetCodeLogo } from "./leetcode.png";
+
 export { default as HTMLLogo } from "./html.png";
 export { default as CSSLogo } from "./css.png";
 export { default as JavaScriptLogo } from "./js.png";
