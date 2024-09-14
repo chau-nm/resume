@@ -7,7 +7,7 @@ export { default as TypeScriptLogo } from "./ts.png";
 
 export { default as JavaLogo } from "./java.png";
 export { default as PythonLogo } from "./python.png";
-export { default as PhpLogo } from "./Php.png";
+export { default as PhpLogo } from "./php.png";
 
 export { default as ReactLogo } from "./react.png";
 export { default as NextJSLogo } from "./nextjs.png";

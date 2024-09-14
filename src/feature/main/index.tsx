@@ -10,6 +10,7 @@ import Summary from "./Summary";
 import ScrollTopButton from "component/ScrollTopButton";
 import Experience from "./Experience";
 import "./main.scss";
+import Technical from "./Technical";
 
 const Main: FC = () => {
   const { section } = useParams();
@@ -63,6 +64,7 @@ const Main: FC = () => {
       <Home />
       <Summary />
       <Album />
+      <Technical />
       <Experience />
       {isVisibleScollTop && <ScrollTopButton />}
     </div>
