@@ -1,12 +1,9 @@
-import { HomeOutline, MailOutline } from "assets/icons";
 import { FC } from "react";
-import { Link } from "react-scroll";
-import { ALBUM, EXPERIENCE, HOME, REPOSITORY, SUMMARY } from "../sections";
 import { ContactLink } from "./ContactLink";
 import styles from "./footer.module.scss";
-import { Signature } from "./Signature";
-import { Navigation } from "./Navigation";
 import { Information } from "./Information";
+import { Navigation } from "./Navigation";
+import { Signature } from "./Signature";
 
 const Footer: FC = () => (
   <div className={styles["footer"]}>
