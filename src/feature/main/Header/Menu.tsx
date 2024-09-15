@@ -4,6 +4,7 @@ import {
   HOME,
   SUMMARY,
   REPOSITORY,
+  TECHNICAL,
 } from "feature/main/sections";
 import { FC } from "react";
 import styles from "./header.module.scss";
@@ -25,6 +26,11 @@ export const Menu: FC = () => (
       <li>
         <Link to={ALBUM} smooth duration={500}>
           Album
+        </Link>
+      </li>
+      <li>
+        <Link to={TECHNICAL} smooth duration={500}>
+          Technical
         </Link>
       </li>
       <li>

@@ -26,5 +26,11 @@
         height: 100%;
       }
     }
+
+    .no-data span {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: #c4c4c4;
+    }
   }
 }

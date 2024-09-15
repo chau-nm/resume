@@ -1,34 +1,9 @@
 import { FC, useState } from "react";
-import styles from "./album.module.scss";
-import { AlbumType } from "./type";
-import { AlbumItem } from "./AlbumItem";
-import hutao from "assets/images/image.webp";
-import img from "assets/images/background.jpg";
-import { AlbumDetailPopup } from "./AlbumDetailPopup";
 import { SectionWrapper } from "../SectionWrapper";
-
-const albumData: AlbumType[] = [
-  {
-    title: "Hutao",
-    src: hutao,
-  },
-  {
-    title: "Hutao",
-    src: img,
-  },
-  {
-    title: "Hutao",
-    src: hutao,
-  },
-  {
-    title: "Hutao",
-    src: hutao,
-  },
-  {
-    title: "Hutao",
-    src: hutao,
-  },
-];
+import styles from "./album.module.scss";
+import { AlbumDetailPopup } from "./AlbumDetailPopup";
+import { AlbumItem } from "./AlbumItem";
+import { albumData } from "./data";
 
 const Album: FC = () => {
   const [isOpenAlbumDetail, setIsOpennAlbumDetail] = useState(false);
@@ -46,24 +21,32 @@ const Album: FC = () => {
   return (
     <SectionWrapper sectionId="album" title="ALBUM" className={styles.album}>
       <div className={styles["album-items"]}>
-        {albumData.map((data, index) => {
-          return (
-            <AlbumItem
-              key={index}
-              src={data.src}
-              alt={data.title}
-              handleOpenAlbumDetail={() => openAlbumDetail(index)}
-            />
-          );
-        })}
+        {albumData.length <= 0 ? (
+          <div className={styles["no-data"]}>
+            <span>There is no data</span>
+          </div>
+        ) : (
+          albumData.map((data, index) => {
+            return (
+              <AlbumItem
+                key={index}
+                src={data.src}
+                alt={data.title}
+                handleOpenAlbumDetail={() => openAlbumDetail(index)}
+              />
+            );
+          })
+        )}
       </div>
-      <AlbumDetailPopup
-        visible={isOpenAlbumDetail}
-        handleClose={handleCloseAlbumDetail}
-        albumData={albumData}
-        imageIndex={currentImageIndex}
-        setImageIndex={setIsCurrentImageIndex}
-      />
+      {albumData.length > 0 && (
+        <AlbumDetailPopup
+          visible={isOpenAlbumDetail}
+          handleClose={handleCloseAlbumDetail}
+          albumData={albumData}
+          imageIndex={currentImageIndex}
+          setImageIndex={setIsCurrentImageIndex}
+        />
+      )}
     </SectionWrapper>
   );
 };
