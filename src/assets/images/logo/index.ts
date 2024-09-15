@@ -18,6 +18,7 @@ export { default as NestJSLogo } from "./nest.png";
 export { default as Yii2Logo } from "./yii2.png";
 export { default as SpringLogo } from "./spring.png";
 export { default as ThymeleafLogo } from "./thymeleaf.png";
+export { default as KnockoutJS } from "./knockoutjs.png";
 
 export { default as MySQLLogo } from "./mysql.png";
 export { default as PostgreLogo } from "./postgre.png";
@@ -25,3 +26,5 @@ export { default as PostgreLogo } from "./postgre.png";
 export { default as RedisLogo } from "./redis.png";
 export { default as FirebaseLogo } from "./firebase.png";
 export { default as SamlLogo } from "./saml.png";
+export { default as AWSLogo } from "./aws.png";
+export { default as DockerLogo } from "./docker.png";
