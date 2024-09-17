@@ -1,3 +1,6 @@
+@import url(assets/sass/font.scss);
+@import url(assets/sass/_variable.scss);
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,8 +8,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
- 
 }
 
 ::-webkit-scrollbar {

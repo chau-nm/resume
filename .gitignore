@@ -3,5 +3,7 @@
 
 # yarn lock
 yarn.lock
+package.lock
+
 
 /build
