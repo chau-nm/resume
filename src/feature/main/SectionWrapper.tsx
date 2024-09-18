@@ -1,3 +1,4 @@
+import { DoubleLeftOutline, DoubleRightOutline } from "assets/icons";
 import classNames from "classnames";
 import { FC } from "react";
 
@@ -17,7 +18,11 @@ export const SectionWrapper: FC<SectionWrapperProps> = ({
   return (
     <div id={sectionId} className={classNames("section", className)}>
       <div className="title">
+        <div className="line"></div>
+        <DoubleRightOutline />
         <h3>{title}</h3>
+        <DoubleLeftOutline />
+        <div className="line"></div>
       </div>
       {children}
     </div>

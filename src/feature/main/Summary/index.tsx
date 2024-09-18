@@ -7,9 +7,9 @@ const Summary: FC = () => (
   <SectionWrapper
     sectionId="summary"
     title="SUMMARY"
-    className={styles.summary}
+    className={styles["summary"]}
   >
-    <div className={styles.content}>
+    <div className={styles["content"]}>
       <p>
         Hi, I'm Nguyen Minh Chau. I'm a Software Engineer with 2 years of
         experience in developing and maintaining software applications. I have a
@@ -18,7 +18,7 @@ const Summary: FC = () => (
         passionate about creating efficient and scalable software solutions.
       </p>
     </div>
-    <div className={styles.viewCVButton}>
+    <div className={styles["view-cv-button"]}>
       <Button>View CV</Button>
     </div>
   </SectionWrapper>
