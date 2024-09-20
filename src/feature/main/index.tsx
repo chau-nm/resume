@@ -13,6 +13,7 @@ import "./main.scss";
 import Technical from "./Technical";
 import Repository from "./Repository";
 import Footer from "./Footer";
+import SettingFAB from "./SettingFAB";
 
 const Main: FC = () => {
   const { section } = useParams();
@@ -70,6 +71,7 @@ const Main: FC = () => {
       <Experience />
       <Repository />
       <Footer />
+      <SettingFAB />
       {isVisibleScollTop && <ScrollTopButton />}
     </div>
   );

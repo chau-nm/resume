@@ -10,3 +10,4 @@ export { ReactComponent as DoubleRightOutline } from "./double-right.svg";
 export { ReactComponent as PhoneOutline } from "./phone.svg";
 export { ReactComponent as MailOutline } from "./mail.svg";
 export { ReactComponent as HomeOutline } from "./home.svg";
+export { ReactComponent as SettingOutline } from "./setting.svg";
