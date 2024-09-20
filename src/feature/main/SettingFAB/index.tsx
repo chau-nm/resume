@@ -11,8 +11,16 @@ const SettingFAB: FC = () => {
       </FABChild>
       <FABChild icon={<SettingOutline />}>
         <FABChild icon={<SettingOutline />} />
+        <FABChild icon={<SettingOutline />} />
+        <FABChild icon={<SettingOutline />} />
+        <FABChild icon={<SettingOutline />} />
+        <FABChild icon={<SettingOutline />} />
       </FABChild>
       <FABChild icon={<SettingOutline />}>
+        <FABChild icon={<SettingOutline />} />
+        <FABChild icon={<SettingOutline />} />
+        <FABChild icon={<SettingOutline />} />
+        <FABChild icon={<SettingOutline />} />
         <FABChild icon={<SettingOutline />} />
       </FABChild>
     </FAB>
