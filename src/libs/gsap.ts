@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 type DOMTarget = Element | string | null | Window | ArrayLike<Element | string | Window | null>
 
 export const timelineScroll = (
-  target: DOMTarget
+  target?: DOMTarget
 ): gsap.core.Timeline => 
   gsap.timeline({
     scrollTrigger: {
@@ -18,3 +18,18 @@ export const timelineScroll = (
       toggleActions: "play none none reverse",
     },
   });
+
+export const tweenFromToScroll = (
+  target: GSAPTweenTarget,
+  fromVars: GSAPTweenVars,
+  toVars: GSAPTweenVars
+) => 
+  gsap.fromTo(target, fromVars, {
+    ...toVars,
+    scrollTrigger: {
+      trigger: target as DOMTarget,
+      start: "top 80%",
+      end: "top: 20%",
+      toggleActions: "play none none reverse",
+    },
+  })
