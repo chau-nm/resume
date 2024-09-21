@@ -3,12 +3,14 @@ import styles from "./technical.module.scss";
 
 type TechnicalRowProps = {
   technicalDataSource: string[];
+  setRef: (element: HTMLDivElement | null) => void;
 };
 
 export const TechnicalRow: FC<TechnicalRowProps> = ({
   technicalDataSource,
+  setRef,
 }) => (
-  <div className={styles["technical-row"]}>
+  <div ref={(element) => setRef(element)} className={styles["technical-row"]}>
     <ul>
       {technicalDataSource.map((source, index) => {
         return (

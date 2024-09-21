@@ -29,3 +29,11 @@ export const isInView = (element: HTMLElement | null): boolean => {
   }
   return false;
 }
+
+/**
+ * Check the number is even or not
+ * 
+ * @param number 
+ * @returns 
+ */
+export const isEvenNumber = (number: number) => number % 2 === 0
