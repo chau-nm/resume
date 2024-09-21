@@ -5,6 +5,7 @@ import { DoubleLeftOutline, DoubleRightOutline } from "assets/icons";
 import { useGSAP } from "@gsap/react";
 import { useMultipleRef } from "hook";
 import { timelineScroll } from "libs/gsap";
+import gsap from "gsap";
 
 type SliderProps = {
   items: React.ReactNode[];
@@ -21,6 +22,7 @@ enum refNames {
 const Slider: FC<SliderProps> = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { getRef, setRef } = useMultipleRef<HTMLDivElement | null>();
+  const { contextSafe } = useGSAP();
 
   useGSAP(() => {
     const timeline = timelineScroll(getRef(refNames.slider));
@@ -61,6 +63,40 @@ const Slider: FC<SliderProps> = ({ items }) => {
       { opacity: 1, y: 0 }
     );
   };
+
+  const handlePreButtonMouseMove = contextSafe(() => {
+    gsap.to(getRef(refNames.prevButton), {
+      x: 10,
+      opacity: 0.5,
+      animationTimingFunction: "ease-out",
+      duration: 0.1,
+    });
+  });
+
+  const handlePreButtonMouseLeave = contextSafe(() => {
+    gsap.to(getRef(refNames.prevButton), {
+      x: 0,
+      opacity: 1,
+      duration: 0.1,
+    });
+  });
+
+  const handleNextButtonMouseMove = contextSafe(() => {
+    gsap.to(getRef(refNames.nextButton), {
+      x: -10,
+      opacity: 0.5,
+      animationTimingFunction: "ease-out",
+      duration: 0.1,
+    });
+  });
+
+  const handleNextButtonMouseLeave = contextSafe(() => {
+    gsap.to(getRef(refNames.nextButton), {
+      x: 0,
+      opacity: 1,
+      duration: 0.1,
+    });
+  });
 
   const previousIndex = useMemo(
     () => (currentIndex <= 0 ? items.length - 1 : currentIndex - 1),
@@ -113,6 +149,8 @@ const Slider: FC<SliderProps> = ({ items }) => {
         ref={(element) => setRef(refNames.prevButton, element)}
         className={styles["previous-button"]}
         onClick={previousHandle}
+        onMouseMove={handlePreButtonMouseMove}
+        onMouseLeave={handlePreButtonMouseLeave}
       >
         <DoubleLeftOutline />
       </div>
@@ -120,6 +158,8 @@ const Slider: FC<SliderProps> = ({ items }) => {
         ref={(element) => setRef(refNames.nextButton, element)}
         className={styles["next-button"]}
         onClick={nextHandle}
+        onMouseMove={handleNextButtonMouseMove}
+        onMouseLeave={handleNextButtonMouseLeave}
       >
         <DoubleRightOutline />
       </div>

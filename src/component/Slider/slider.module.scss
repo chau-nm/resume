@@ -20,6 +20,10 @@
       transition: all .5s;
       z-index: 0;
 
+      @media screen and (max-width: 1080px) {
+        width: 100%;
+      }
+
       & > * {
         width: 100%;
         height: 100%;
@@ -56,18 +60,16 @@
   .previous-button {
     left: 10px;
 
-    &:hover {
-      transform: translate(5px, -50%);
-      opacity: .5;
+    @media screen and (max-width: 1080px) {
+      left: 0;
     }
   }
 
   .next-button {
     right: 10px;
 
-    &:hover {
-      transform: translate(-5px, -50%);
-      opacity: .5;
+    @media screen and (max-width: 1080px) {
+      right: 0;
     }
   }
 
