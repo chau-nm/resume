@@ -7,12 +7,16 @@
   .title {
     color: rgb(43, 43, 43);
     font-size: 1.25rem;
+    font-family: 'alegreya';
+    font-weight: bold;
+    opacity: 0.7;
   }
   
   svg {
     width: 50px;
     height: 50px;
     transform: translateY(-30%);
+    fill: #515151;
     animation-name: buttonLoop;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
@@ -26,7 +30,7 @@
     transform: translateY(-40%);
   }
   60% {
-    opacity: 1;
+    opacity: 0.7;
     transform: translateY(-20%);
   }
   100% {
