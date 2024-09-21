@@ -71,7 +71,7 @@ const Main: FC = () => {
       <Experience />
       <Repository />
       <Footer />
-      <SettingFAB />
+      {/* <SettingFAB /> */}
       {isVisibleScollTop && <ScrollTopButton />}
     </div>
   );
