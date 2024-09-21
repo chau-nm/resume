@@ -1,17 +1,16 @@
+import classNames from "classnames";
+import ListSwitchButton from "component/ListSwitchButton";
 import {
   ALBUM,
   EXPERIENCE,
   HOME,
-  SUMMARY,
   REPOSITORY,
+  SUMMARY,
   TECHNICAL,
 } from "feature/main/sections";
 import { FC, useEffect, useRef, useState } from "react";
-import styles from "./header.module.scss";
 import { Link } from "react-scroll";
-import { ArrowLeftOutline } from "assets/icons";
-import classNames from "classnames";
-import ListSwitchButton from "component/ListSwitchButton";
+import styles from "./header.module.scss";
 
 export const Menu: FC = () => {
   const menuRef = useRef<HTMLDivElement>(null);

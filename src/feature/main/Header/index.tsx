@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef } from "react";
 import styles from "./header.module.scss";
 import { Menu } from "./Menu";
 import { Signature } from "./Signature";

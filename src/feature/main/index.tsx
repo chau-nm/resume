@@ -1,19 +1,18 @@
 import * as path from "common/path";
 import { isInView, scrollInView } from "common/util";
+import ScrollTopButton from "component/ScrollTopButton";
 import { FC, useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import PageNotFound from "../404";
 import Album from "./Album";
+import Experience from "./Experience";
+import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./Home";
-import Summary from "./Summary";
-import ScrollTopButton from "component/ScrollTopButton";
-import Experience from "./Experience";
 import "./main.scss";
-import Technical from "./Technical";
 import Repository from "./Repository";
-import Footer from "./Footer";
-import SettingFAB from "./SettingFAB";
+import Summary from "./Summary";
+import Technical from "./Technical";
 
 const Main: FC = () => {
   const { section } = useParams();
