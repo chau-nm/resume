@@ -22,6 +22,7 @@ const Album: FC = () => {
   useGSAP(() => {
     const timeline = timelineScroll(getRef(refNames.albumList));
     applyNoContentTimeline(timeline);
+    applyImageTween(timeline);
   });
 
   const applyNoContentTimeline = (timeline: GSAPTimeline) => {
@@ -33,6 +34,19 @@ const Album: FC = () => {
       },
       { opacity: 1, width: "unset" }
     );
+  };
+
+  const applyImageTween = (timeline: GSAPTimeline) => {
+    imageRef.current.forEach((element) => {
+      timeline.fromTo(
+        element,
+        {
+          opacity: 0,
+          scale: 0.3,
+        },
+        { opacity: 1, scale: 1 }
+      );
+    });
   };
 
   const openAlbumDetail = (index: number) => {
