@@ -24,6 +24,10 @@
   .menu {
     padding: 20px 8%;
 
+    .back {
+      display: none;
+    }
+
     ul {
       display: flex;
 
@@ -73,5 +77,47 @@
   100%{
     transform: translateY(0);
     opacity: 100%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .header {
+    justify-content: center;
+
+    .menu {
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      left: -999px;
+      background-color: #ffffff;
+      padding: 0;
+      transition: .5s;
+
+      &.active {
+        left: 0;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+  
+        li {
+          padding: 0;
+          a {
+            width: 225px;
+            padding: 20px;
+            display: block;
+            font-size: 1.25rem;
+            transition: 0.3s;
+            color: #000000;
+
+            &:hover {
+              background-color: #efefef;
+            }
+          }
+        }
+      }
+    }
   }
 }

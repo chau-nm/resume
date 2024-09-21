@@ -1,7 +1,7 @@
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import styles from "./header.module.scss";
-import { Signature } from "./Signature";
 import { Menu } from "./Menu";
+import { Signature } from "./Signature";
 
 const Header: FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
