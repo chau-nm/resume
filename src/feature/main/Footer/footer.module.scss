@@ -103,3 +103,17 @@
   }
 }
 
+@media screen and (max-width: 1080px) {
+  .footer {
+    .content {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      text-align: center;
+
+      .right svg {
+        display: none;
+      }
+    }
+  }
+}
