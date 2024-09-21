@@ -1,8 +1,8 @@
-import { FC, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { DoubleLeftOutline, DoubleRightOutline } from "assets/icons";
 import classNames from "classnames";
-import gsap from "gsap";
+import { timelineScroll } from "libs/gsap";
+import { FC, useRef } from "react";
 
 type SectionWrapperProps = {
   sectionId: string;
@@ -19,30 +19,26 @@ export const SectionWrapper: FC<SectionWrapperProps> = ({
 }) => {
   const titleRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    if (!titleRef.current) return;
-    const titleElement = titleRef.current;
-    const titleText = titleElement.querySelector(".title-text");
-    const icons = titleElement.querySelectorAll("svg");
-    const lines = titleElement.querySelectorAll(".line");
-    const timeLine = gsap.timeline({
-      scrollTrigger: {
-        trigger: titleElement,
-        start: "top 80%",
-        end: "top: 20%",
-        toggleActions: "play none none reverse",
-      },
-    });
-    applyTitleTextTween(timeLine, titleText);
-    applyIconTween(timeLine, icons);
-    applyLineTween(timeLine, lines);
-  });
+  useGSAP(
+    () => {
+      if (!titleRef.current) return;
+      const titleElement = titleRef.current;
+      const titleText = titleElement.querySelector(".title-text");
+      const icons = titleElement.querySelectorAll("svg");
+      const lines = titleElement.querySelectorAll(".line");
+      const timeline = timelineScroll(titleElement);
+      applyTitleTextTween(timeline, titleText);
+      applyIconTween(timeline, icons);
+      applyLineTween(timeline, lines);
+    },
+    { scope: titleRef }
+  );
 
   const applyTitleTextTween = (
-    timeLine: GSAPTimeline,
+    timeline: GSAPTimeline,
     target: GSAPTweenTarget
   ) => {
-    timeLine.fromTo(
+    timeline.fromTo(
       target,
       {
         scale: 0,
@@ -52,8 +48,8 @@ export const SectionWrapper: FC<SectionWrapperProps> = ({
     );
   };
 
-  const applyIconTween = (timeLine: GSAPTimeline, target: GSAPTweenTarget) => {
-    timeLine.fromTo(
+  const applyIconTween = (timeline: GSAPTimeline, target: GSAPTweenTarget) => {
+    timeline.fromTo(
       target,
       {
         fill: "none",
@@ -65,8 +61,8 @@ export const SectionWrapper: FC<SectionWrapperProps> = ({
     );
   };
 
-  const applyLineTween = (timeLine: GSAPTimeline, target: GSAPTweenTarget) => {
-    timeLine.fromTo(
+  const applyLineTween = (timeline: GSAPTimeline, target: GSAPTweenTarget) => {
+    timeline.fromTo(
       target,
       {
         flex: 0,
