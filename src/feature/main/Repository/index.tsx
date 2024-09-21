@@ -1,19 +1,14 @@
 import { FC } from "react";
 import { SectionWrapper } from "../SectionWrapper";
-import styles from "./project.module.scss";
 import Slider from "component/Slider";
-import ProjectItems from "./Items";
+import RepositoryItems from "./Items";
 
-const Project: FC = () => {
+const Repository: FC = () => {
   return (
-    <SectionWrapper
-      sectionId="repository"
-      title="Repository"
-      className={styles.project}
-    >
-      <Slider items={ProjectItems} />
+    <SectionWrapper sectionId="repository" title="Repository">
+      <Slider items={RepositoryItems} />
     </SectionWrapper>
   );
 };
 
-export default Project;
+export default Repository;
