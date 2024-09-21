@@ -5,7 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-export const timelineScroll = (target: Element | string) => 
+type DOMTarget = Element | string | null | Window | ArrayLike<Element | string | Window | null>
+
+export const timelineScroll = (
+  target: DOMTarget
+): gsap.core.Timeline => 
   gsap.timeline({
     scrollTrigger: {
       trigger: target,
