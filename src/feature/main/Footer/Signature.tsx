@@ -6,7 +6,7 @@ import { HOME } from "../sections";
 export const Signature: FC = () => (
   <div className={styles.signature}>
     <Link to={HOME} smooth duration={500}>
-      ChauNM
+      NMC
     </Link>
   </div>
 );
