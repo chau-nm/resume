@@ -17,17 +17,25 @@ const Summary: FC = () => {
 
   useGSAP(() => {
     const timeline = timelineScroll(getRef(refNames.summary));
+    applyContentTween(timeline);
+    applyButtonTween(timeline);
+  });
+
+  const applyContentTween = (timeline: GSAPTimeline) => {
     timeline.fromTo(
       getRef(refNames.content),
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0 }
     );
+  };
+
+  const applyButtonTween = (timeline: GSAPTimeline) => {
     timeline.fromTo(
       getRef(refNames.button),
       { opacity: 0, scale: 0.5 },
       { opacity: 1, scale: 1 }
     );
-  });
+  };
 
   return (
     <SectionWrapper

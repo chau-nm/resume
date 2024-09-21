@@ -19,20 +19,17 @@ export const SectionWrapper: FC<SectionWrapperProps> = ({
 }) => {
   const titleRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(
-    () => {
-      if (!titleRef.current) return;
-      const titleElement = titleRef.current;
-      const titleText = titleElement.querySelector(".title-text");
-      const icons = titleElement.querySelectorAll("svg");
-      const lines = titleElement.querySelectorAll(".line");
-      const timeline = timelineScroll(titleElement);
-      applyTitleTextTween(timeline, titleText);
-      applyIconTween(timeline, icons);
-      applyLineTween(timeline, lines);
-    },
-    { scope: titleRef }
-  );
+  useGSAP(() => {
+    if (!titleRef.current) return;
+    const titleElement = titleRef.current;
+    const titleText = titleElement.querySelector(".title-text");
+    const icons = titleElement.querySelectorAll("svg");
+    const lines = titleElement.querySelectorAll(".line");
+    const timeline = timelineScroll(titleElement);
+    applyTitleTextTween(timeline, titleText);
+    applyIconTween(timeline, icons);
+    applyLineTween(timeline, lines);
+  });
 
   const applyTitleTextTween = (
     timeline: GSAPTimeline,
