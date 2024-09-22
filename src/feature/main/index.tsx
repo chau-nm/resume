@@ -1,4 +1,4 @@
-import * as path from "common/path";
+import * as mainSectionPath from "common/mainSectionPath";
 import { isInView, scrollInView } from "common/util";
 import ScrollTopButton from "component/ScrollTopButton";
 import { FC, useEffect, useState } from "react";
@@ -18,7 +18,7 @@ const Main: FC = () => {
   const { section } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const availablePath = Object.values(path) as string[];
+  const availablePath = Object.values(mainSectionPath) as string[];
   const [isVisibleScollTop, setIsVisibleScrollTop] = useState(false);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -45,9 +45,11 @@ const Main: FC = () => {
     const handleScroll = () => {
       availablePath.forEach((path) => {
         const sectionPath = path.slice(1);
-        const element = document.getElementById(sectionPath);
-        if (isInView(element) && section !== path) {
-          navigate(path, { replace: true });
+        if (sectionPath) {
+          const element = document.getElementById(sectionPath);
+          if (isInView(element) && section !== path) {
+            navigate(path, { replace: true });
+          }
         }
       });
     };
