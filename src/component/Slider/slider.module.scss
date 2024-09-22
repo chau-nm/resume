@@ -55,14 +55,6 @@
           transform: translate3d(-14%, 15%, -100px) scale(0.3);
         }
       }
-
-      &.item-previous:hover, &.item-next:hover {
-        cursor: pointer;
-        border-style: groove;
-        border-width: 6px;
-        border-color: rgba($color: blue, $alpha: 0.3);
-        transition: 0.3s;
-      }
     }
   }
 

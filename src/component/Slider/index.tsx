@@ -131,14 +131,10 @@ const Slider: FC<SliderProps> = ({ items }) => {
       const endX = event.clientX;
       const movementX = endX - startX;
       if (movementX > 0) {
-        setCurrentIndex(
-          currentIndex <= 0 ? items.length - 1 : currentIndex - 1
-        );
+        previousHandle();
       }
       if (movementX < 0) {
-        setCurrentIndex(
-          currentIndex >= items.length - 1 ? 0 : currentIndex + 1
-        );
+        nextHandle();
       }
 
       setDrag(false);
@@ -163,11 +159,7 @@ const Slider: FC<SliderProps> = ({ items }) => {
             [styles["item-next"]]: nextIndex === index,
           });
           return (
-            <div
-              key={index}
-              className={className}
-              // onClick={() => setCurrentIndex(index)}
-            >
+            <div key={index} className={className}>
               {items}
             </div>
           );
