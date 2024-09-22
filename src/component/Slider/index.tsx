@@ -136,7 +136,6 @@ const Slider: FC<SliderProps> = ({ items }) => {
       if (movementX < 0) {
         nextHandle();
       }
-
       setDrag(false);
     }
   };
@@ -175,15 +174,6 @@ const Slider: FC<SliderProps> = ({ items }) => {
         <DoubleLeftOutline />
       </div>
       <div
-        ref={(element) => setRef(refNames.nextButton, element)}
-        className={styles["next-button"]}
-        onClick={nextHandle}
-        onMouseMove={handleNextButtonMouseMove}
-        onMouseLeave={handleNextButtonMouseLeave}
-      >
-        <DoubleRightOutline />
-      </div>
-      <div
         ref={(element) => setRef(refNames.indicator, element)}
         className={styles["indicator"]}
       >
@@ -196,6 +186,15 @@ const Slider: FC<SliderProps> = ({ items }) => {
             onClick={() => setCurrentIndex(index)}
           ></div>
         ))}
+      </div>
+      <div
+        ref={(element) => setRef(refNames.nextButton, element)}
+        className={styles["next-button"]}
+        onClick={nextHandle}
+        onMouseMove={handleNextButtonMouseMove}
+        onMouseLeave={handleNextButtonMouseLeave}
+      >
+        <DoubleRightOutline />
       </div>
     </div>
   );
