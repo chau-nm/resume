@@ -4,6 +4,11 @@
   background-size: cover;
   padding: 110px;
 
+  @media screen and (max-width: 620px) {
+    padding: 110px 40px;
+  }
+
+
   * {
     color: #000000;
     font-size: 1.25rem;
@@ -20,14 +25,25 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 1080px) {
+      width: 84%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
     label {
       font-weight: 800;
       width: 15%;
     }
 
-    img {
-      height: 50px;
-      margin: 0 20px;
+    .tech-item {
+      display: flex;
+
+      img {
+        height: 50px;
+        margin: 0 20px;
+      }
     }
 
     a {

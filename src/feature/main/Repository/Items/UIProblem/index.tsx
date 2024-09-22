@@ -24,9 +24,11 @@ export const UIProblem: FC = () => {
           </li>
           <li className={styles["field"]}>
             <label>Technical: </label>{" "}
-            {technicalUrls.map((url, index) => (
-              <img key={index} src={url} alt="" />
-            ))}
+            <div className={styles["tech-item"]}>
+              {technicalUrls.map((url, index) => (
+                <img key={index} src={url} alt="" />
+              ))}
+            </div>
           </li>
           <li className={styles["field"]}>
             <p>At this project, I only coding with HTML, CSS, JS.</p>

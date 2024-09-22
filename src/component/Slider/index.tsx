@@ -1,4 +1,4 @@
-import { FC, useMemo, useState } from "react";
+import { FC, PointerEventHandler, useMemo, useState } from "react";
 import styles from "./slider.module.scss";
 import classNames from "classnames";
 import { DoubleLeftOutline, DoubleRightOutline } from "assets/icons";
@@ -21,6 +21,8 @@ enum refNames {
 
 const Slider: FC<SliderProps> = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDrag, setDrag] = useState(false);
+  const [startX, setStartX] = useState(-1);
   const { getRef, setRef } = useMultipleRef<HTMLDivElement | null>();
   const { contextSafe } = useGSAP();
 
@@ -119,10 +121,36 @@ const Slider: FC<SliderProps> = ({ items }) => {
     );
   };
 
+  const handlePointerDown: PointerEventHandler<HTMLDivElement> = (event) => {
+    setDrag(true);
+    setStartX(event.clientX);
+  };
+
+  const handlePointerUp: PointerEventHandler<HTMLDivElement> = (event) => {
+    if (isDrag) {
+      const endX = event.clientX;
+      const movementX = endX - startX;
+      if (movementX > 0) {
+        setCurrentIndex(
+          currentIndex <= 0 ? items.length - 1 : currentIndex - 1
+        );
+      }
+      if (movementX < 0) {
+        setCurrentIndex(
+          currentIndex >= items.length - 1 ? 0 : currentIndex + 1
+        );
+      }
+
+      setDrag(false);
+    }
+  };
+
   return (
     <div
       ref={(element) => setRef(refNames.slider, element)}
       className={styles["slider"]}
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
     >
       <div
         ref={(element) => setRef(refNames.content, element)}
@@ -138,7 +166,7 @@ const Slider: FC<SliderProps> = ({ items }) => {
             <div
               key={index}
               className={className}
-              onClick={() => setCurrentIndex(index)}
+              // onClick={() => setCurrentIndex(index)}
             >
               {items}
             </div>

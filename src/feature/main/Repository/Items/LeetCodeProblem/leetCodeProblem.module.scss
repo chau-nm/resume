@@ -3,6 +3,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 80px;
+  
+  @media screen and (max-width: 620px) {
+    padding: 80px 40px;
+  }
 
   * {
     color: #000000;
@@ -20,6 +24,13 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 1080px) {
+      width: 84%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
     label {
       font-weight: 800;
       width: 15%;
@@ -33,6 +44,7 @@
       color: #3142ff;
       cursor: pointer;
       transition: 0.3s;
+      text-wrap: wrap;
 
       &:hover {
         color: #5a68ff;
@@ -42,6 +54,7 @@
     p {
       color: #454545;
       font-style: italic;
+      text-wrap: wrap;
     }
   }
 }

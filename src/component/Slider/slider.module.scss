@@ -19,9 +19,10 @@
       opacity: 0;
       transition: all .5s;
       z-index: 0;
+      user-select: none;
 
       @media screen and (max-width: 1080px) {
-        width: 100%;
+        width: 98%;
       }
 
       & > * {
@@ -33,6 +34,10 @@
         transform: translate3d(-95%, 15%, -100px) scale(0.3);
         opacity: .5;
         z-index: 1;
+
+        @media screen and (max-width: 1080px) {
+          transform: translate3d(-86%, 15%, -100px) scale(0.3);
+        }
       }
 
       &.item-current {
@@ -45,6 +50,10 @@
         transform: translate3d(-5%, 15%, -100px) scale(0.3);
         opacity: .5;
         z-index: 1;
+
+        @media screen and (max-width: 1080px) {
+          transform: translate3d(-14%, 15%, -100px) scale(0.3);
+        }
       }
 
       &.item-previous:hover, &.item-next:hover {
@@ -85,6 +94,10 @@
     svg {
       width: 100px;
       height: 50px;
+    }
+
+    @media screen and (max-width: 620px) {
+      display: none;
     }
   }
 
