@@ -1,0 +1,1 @@
+export { default as FCode } from "./fcode.jpg";
