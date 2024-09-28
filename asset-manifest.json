@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/resume/static/css/main.d9fd7962.css",
-    "main.js": "/resume/static/js/main.1afd69d7.js",
+    "main.css": "/resume/static/css/main.dad2a157.css",
+    "main.js": "/resume/static/js/main.d6de4658.js",
     "static/js/453.90c38bfe.chunk.js": "/resume/static/js/453.90c38bfe.chunk.js",
+    "static/media/fcode.jpg": "/resume/static/media/fcode.5e4e891e5ddb6ecf1a4f.jpg",
     "static/media/Alegreya-Bold.ttf": "/resume/static/media/Alegreya-Bold.85608bcc145100f2e50f.ttf",
     "static/media/Montserrat-Italic.ttf": "/resume/static/media/Montserrat-Italic.f4a742d68090a0bfc33f.ttf",
     "static/media/Montserrat-Bold.ttf": "/resume/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
@@ -50,12 +51,12 @@
     "static/media/arrow-up.svg": "/resume/static/media/arrow-up.c4ce15c4d93440c750d03429515059fc.svg",
     "static/media/facebook.svg": "/resume/static/media/facebook.6b9b52e56eba37bfd57e707399c620fa.svg",
     "static/media/caret-down.svg": "/resume/static/media/caret-down.6d6fc4abc370255a7c19d5590c81121c.svg",
-    "main.d9fd7962.css.map": "/resume/static/css/main.d9fd7962.css.map",
-    "main.1afd69d7.js.map": "/resume/static/js/main.1afd69d7.js.map",
+    "main.dad2a157.css.map": "/resume/static/css/main.dad2a157.css.map",
+    "main.d6de4658.js.map": "/resume/static/js/main.d6de4658.js.map",
     "453.90c38bfe.chunk.js.map": "/resume/static/js/453.90c38bfe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9fd7962.css",
-    "static/js/main.1afd69d7.js"
+    "static/css/main.dad2a157.css",
+    "static/js/main.d6de4658.js"
   ]
 }
