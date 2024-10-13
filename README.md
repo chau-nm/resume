@@ -1,2 +1,2 @@
 # CHAU-NM'S RESUME
-Deploy: chaunm.github.io/resume
+Deploy: https://chaunm.github.io/resume
