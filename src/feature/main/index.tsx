@@ -12,7 +12,8 @@ import Home from "./Home";
 import "./main.scss";
 import Repository from "./Repository";
 import Summary from "./Summary";
-import Technical from "./Technical";
+// import Technical from "./Technical";
+import Skill from "./Skill";
 
 const Main: FC = () => {
   const { section } = useParams();
@@ -68,7 +69,8 @@ const Main: FC = () => {
       <Home />
       <Summary />
       <Album />
-      <Technical />
+      {/* <Technical /> */}
+      <Skill />
       <Experience />
       <Repository />
       <Footer />

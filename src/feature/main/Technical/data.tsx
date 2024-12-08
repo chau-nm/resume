@@ -12,11 +12,9 @@ import {
   PythonLogo,
   ReactLogo,
   ReactNativeLogo,
-  RedisLogo,
-  SamlLogo,
   SpringLogo,
   TypeScriptLogo,
-  Yii2Logo,
+  Yii2Logo
 } from "assets/images/logo";
 
 export const technicalData = [
@@ -24,5 +22,5 @@ export const technicalData = [
   [JavaLogo, PhpLogo, PythonLogo],
   [ReactLogo, ReactNativeLogo, NextJSLogo, NestJSLogo, SpringLogo, Yii2Logo],
   [MySQLLogo, PostgreLogo],
-  [RedisLogo, FirebaseLogo, SamlLogo],
+  [FirebaseLogo],
 ];
