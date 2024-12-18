@@ -12,7 +12,9 @@ export const TechnicalBlock: FC<TechnicalBlockProps> = ({
 }) => {
     return (
         <div className={styles.block}>
-            <img src={imageUrl}/>
+            <div className={styles["img-wrapper"]}>
+                <img src={imageUrl} alt={caption}/>
+            </div>
             <span>{caption}</span>
         </div>
     )

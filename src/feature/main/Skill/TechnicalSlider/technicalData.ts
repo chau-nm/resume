@@ -1,16 +1,23 @@
-import { CSSLogo, DockerLogo, HTMLLogo, JavaLogo, JavaScriptLogo, MySQLLogo, PostgreLogo, PythonLogo, TypeScriptLogo } from "assets/images/logo";
+import {
+    CSSSkill, DockerSkill,
+    HTMLSkill,
+    JavaScriptSkill,
+    MySQLLogo, PostgreSkill,
+    PythonSkill,
+    TypeScriptLogo
+} from "../../../../assets/images/logo";
 
 export const technicalData = [
     {
-        imageUrl: HTMLLogo,
+        imageUrl: HTMLSkill,
         caption: "HTML"
     },
     {
-        imageUrl: CSSLogo,
+        imageUrl: CSSSkill,
         caption: "CSS"
     },
     {
-        imageUrl: JavaScriptLogo,
+        imageUrl: JavaScriptSkill,
         caption: "Javascript"
     },
     {
@@ -18,11 +25,11 @@ export const technicalData = [
         caption: "Typescript"
     },
     {
-        imageUrl: JavaLogo,
+        imageUrl: JavaScriptSkill,
         caption: "Java"
     },
     {
-        imageUrl: PythonLogo,
+        imageUrl: PythonSkill,
         caption: "Python"
     },
     {
@@ -30,11 +37,11 @@ export const technicalData = [
         caption: "MySQL"
     },
     {
-        imageUrl: PostgreLogo,
-        caption: "Postgre"
+        imageUrl: PostgreSkill,
+        caption: "Postgres"
     },
     {
-        imageUrl: DockerLogo,
+        imageUrl: DockerSkill,
         caption: "Docker"
     },
 ]

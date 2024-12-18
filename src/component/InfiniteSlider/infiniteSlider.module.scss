@@ -1,0 +1,14 @@
+.infinite-slider-wrapper {
+  overflow: hidden;
+  padding: 10px;
+
+  .infinite-slider {
+    display: flex;
+    gap: 30px;
+
+    .infinite-slider-items {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}

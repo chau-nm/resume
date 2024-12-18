@@ -1,20 +1,18 @@
-import { TechnicalBlock } from "./TechnicalBlock"
-import { technicalData } from "./technicalData"
-import styles from "./technicalSlider.module.scss";
+import {TechnicalBlock} from "./TechnicalBlock"
+import {technicalData} from "./technicalData"
+import InfiniteSlider from "../../../../component/InfiniteSlider";
 
 export const TechnicalSlider = () => {
+    const items: React.ReactNode[] = technicalData.map((data) => {
+        return (
+            <TechnicalBlock
+                imageUrl={data.imageUrl}
+                caption={data.caption}
+            />
+        )
+    });
+
     return (
-        <div className={styles.technical}>
-            {
-                technicalData.map((data) => {
-                    return (
-                        <TechnicalBlock 
-                            imageUrl={data.imageUrl}
-                            caption={data.caption}
-                        />
-                    )
-                })
-            }
-        </div>
+        <InfiniteSlider speed={30} items={items}/>
     )
 }

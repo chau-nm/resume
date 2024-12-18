@@ -3,6 +3,7 @@ import { SkillBlock } from "./SkillBlock";
 import { skillData } from "./skillData";
 import styles from "./skill.module.scss";
 import { TechnicalSlider } from "./TechnicalSlider";
+import InfiniteSlider from "../../../component/InfiniteSlider";
 
 const Skill = () => {
     return (
