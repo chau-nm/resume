@@ -1,8 +1,11 @@
 import {
-    CSSSkill, DockerSkill,
+    CSSSkill, 
+    DockerSkill,
     HTMLSkill,
     JavaScriptSkill,
-    MySQLLogo, PostgreSkill,
+    JavaSkill,
+    MySQLLogo, 
+    PostgreSkill,
     PythonSkill,
     TypeScriptLogo
 } from "../../../../assets/images/logo";
@@ -25,7 +28,7 @@ export const technicalData = [
         caption: "Typescript"
     },
     {
-        imageUrl: JavaScriptSkill,
+        imageUrl: JavaSkill,
         caption: "Java"
     },
     {
