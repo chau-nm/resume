@@ -3,7 +3,6 @@ import { SkillBlock } from "./SkillBlock";
 import { skillData } from "./skillData";
 import styles from "./skill.module.scss";
 import { TechnicalSlider } from "./TechnicalSlider";
-import InfiniteSlider from "../../../component/InfiniteSlider";
 
 const Skill = () => {
     return (
@@ -13,9 +12,9 @@ const Skill = () => {
             className={styles.skill}>
                 <div className={styles["block-wrapper"]}>
                     {
-                        skillData.map((data) => {
+                        skillData.map((data, index) => {
                             return (
-                                <SkillBlock title={data.title} content={data.content}/>
+                                <SkillBlock key={index} title={data.title} content={data.content}/>
                             )
                         })
                     }
