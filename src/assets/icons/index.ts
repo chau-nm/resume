@@ -12,3 +12,5 @@ export { ReactComponent as PhoneOutline } from "./phone.svg";
 export { ReactComponent as MailOutline } from "./mail.svg";
 export { ReactComponent as HomeOutline } from "./home.svg";
 export { ReactComponent as SettingOutline } from "./setting.svg";
+export { ReactComponent as ZaloOutline } from "./zalo.svg";
+export { ReactComponent as GlobalOutline } from "./global.svg";
