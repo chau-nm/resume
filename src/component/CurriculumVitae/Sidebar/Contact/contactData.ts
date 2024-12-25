@@ -27,13 +27,13 @@ export const contactData = [
 	},
 	{
 		icon: LinkedInOutline,
-		content: "www.linkedin.com/in/nguyen-minh-chau-304a2b2b8/",
-		link: "https://www.linkedin.com/in/nguyen-minh-chau-304a2"
+		content: "www.linkedin.com/in/chaunm14",
+		link: "https://www.linkedin.com/in/chaunm14"
 	},
 	{
 		icon: FacebookOutLine,
-		content: "www.facebook.com/light.146.2001/",
-		link: "https://www.facebook.com/light.146.2001/",
+		content: "www.facebook.com/light.146.2001",
+		link: "https://www.facebook.com/light.146.2001",
 	},
 	{
 		icon: ZaloOutline,
@@ -42,7 +42,7 @@ export const contactData = [
 	},
 	{
 		icon: GlobalOutline,
-		content: "chau-nm.github.io/resume/",
-		link: "https://chau-nm.github.io/resume/"
+		content: "chau-nm.github.io/resume",
+		link: "https://chau-nm.github.io/resume"
 	},
 ]
