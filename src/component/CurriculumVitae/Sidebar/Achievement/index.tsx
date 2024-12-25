@@ -7,8 +7,8 @@ export const Achievement: FC = () => {
 	return (
 		<Section title={"Achievement"}>
 			{
-				achievementData.map((data) => (
-					<AchievementItem company={data.company} values={data.values}/>
+				achievementData.map((data, index) => (
+					<AchievementItem key={index} company={data.company} values={data.values}/>
 				))
 			}
 		</Section>
