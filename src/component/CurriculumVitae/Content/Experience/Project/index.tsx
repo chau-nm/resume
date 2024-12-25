@@ -5,6 +5,7 @@ type ProjectProps = {
 	projectName: string;
 	startTime: string;
 	endTime: string;
+	role: string;
 	children: ReactNode;
 }
 
@@ -12,19 +13,18 @@ export const Project:FC<ProjectProps> = ({
 	projectName,
 	startTime,
 	endTime,
+	role,
 	children
 }) => {
 	return (
 		<div className={styles.project}>
-			<div className={styles.step}>
-				<div className={styles.circle}></div>
-				<div className={styles.line}></div>
-			</div>
+			<div className={styles.step}></div>
 			<div className={styles.content}>
 				<div className={styles.head}>
 					<h3>{projectName}</h3>
 					<span>{startTime} - {endTime}</span>
 				</div>
+				<div className={styles.role}>{role}</div>
 				<div className={styles.description}>
 					{children}
 				</div>
