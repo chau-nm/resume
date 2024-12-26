@@ -5,6 +5,8 @@ import { timelineScroll } from "libs/gsap";
 import { FC } from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import styles from "./summary.module.scss";
+import {useNavigate} from "react-router-dom";
+import { CV } from "common/path";
 
 enum refNames {
   summary = "summary",
@@ -14,6 +16,7 @@ enum refNames {
 
 const Summary: FC = () => {
   const { getRef, setRef } = useMultipleRef<HTMLDivElement | null>();
+  const navigate = useNavigate();
 
   useGSAP(() => {
     const timeline = timelineScroll(getRef(refNames.summary));
@@ -36,6 +39,10 @@ const Summary: FC = () => {
       { opacity: 1, scale: 1 }
     );
   };
+  
+  const handleMoveViewCV = () => {
+    navigate(CV);
+  }
 
   return (
     <SectionWrapper
@@ -61,7 +68,7 @@ const Summary: FC = () => {
           ref={(element) => setRef(refNames.button, element)}
           className={styles["view-cv-button"]}
         >
-          <Button>View CV</Button>
+          <Button onClick={handleMoveViewCV}>View CV</Button>
         </div>
       </div>
     </SectionWrapper>
