@@ -1,14 +1,17 @@
-import React, {FC, useRef} from 'react';
+import React, {ComponentPropsWithoutRef, FC, forwardRef, ReactNode, useRef} from 'react';
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
 import styles from "./infiniteSlider.module.scss";
 
-type InfiniteSliderProps = {
+interface InfiniteSliderProps extends ComponentPropsWithoutRef<any> {
 	speed: number;
 	items: React.ReactNode[];
 }
 
-const InfiniteSlider: FC<InfiniteSliderProps> = ({speed, items}) => {
+const InfiniteSlider: FC<InfiniteSliderProps> = forwardRef<HTMLDivElement, InfiniteSliderProps>(({
+ speed,
+ items
+}, ref) => {
 	
 	const sliderRef = useRef<HTMLDivElement>(null);
 	const timelineRef = useRef<GSAPTimeline>();
@@ -34,7 +37,7 @@ const InfiniteSlider: FC<InfiniteSliderProps> = ({speed, items}) => {
 	}
 	
 	return (
-		<div className={styles["infinite-slider-wrapper"]}>
+		<div ref={ref} className={styles["infinite-slider-wrapper"]}>
 			<div
 				className={styles["infinite-slider"]}
 				ref={sliderRef}
@@ -42,7 +45,7 @@ const InfiniteSlider: FC<InfiniteSliderProps> = ({speed, items}) => {
 				onMouseLeave={handleLeaveItem}>
 				<div className={styles["infinite-slider-items"]}>
 					{
-						items.map((item, index) => {
+						items.map((item: ReactNode, index: number) => {
 							return (
 								<div key={index}>
 									{item}
@@ -54,6 +57,6 @@ const InfiniteSlider: FC<InfiniteSliderProps> = ({speed, items}) => {
 			</div>
 		</div>
 	);
-};
+});
 
 export default InfiniteSlider;

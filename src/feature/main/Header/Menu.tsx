@@ -1,15 +1,8 @@
 import classNames from "classnames";
 import ListSwitchButton from "component/ListSwitchButton";
-import {
-  ALBUM,
-  EXPERIENCE,
-  HOME,
-  REPOSITORY,
-  SUMMARY,
-  TECHNICAL,
-} from "feature/main/sections";
-import { FC, useEffect, useRef, useState } from "react";
-import { Link } from "react-scroll";
+import {ALBUM, EXPERIENCE, HOME, REPOSITORY, SKILL, SUMMARY,} from "feature/main/sections";
+import {FC, useEffect, useRef, useState} from "react";
+import {Link} from "react-scroll";
 import styles from "./header.module.scss";
 
 export const Menu: FC = () => {
@@ -55,8 +48,8 @@ export const Menu: FC = () => {
           </Link>
         </li>
         <li>
-          <Link to={TECHNICAL} smooth duration={500}>
-            Technical
+          <Link to={SKILL} smooth duration={500}>
+            Skill
           </Link>
         </li>
         <li>

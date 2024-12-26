@@ -15,7 +15,7 @@ export const timelineScroll = (
       trigger: target,
       start: "top 80%",
       end: "top: 20%",
-      toggleActions: "play none none reverse",
+      toggleActions: "play none none none",
     },
   });
 
@@ -30,6 +30,6 @@ export const tweenFromToScroll = (
       trigger: target as DOMTarget,
       start: "top 80%",
       end: "top: 20%",
-      toggleActions: "play none none reverse",
+      toggleActions: "play none none none",
     },
   })

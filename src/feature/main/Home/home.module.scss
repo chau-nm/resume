@@ -4,15 +4,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -2;
+    left: -250px;
+    bottom: -250px;
+    box-shadow: 0 0 1000px 500px #7ed3ff;
+    opacity: 0.5;
+    z-index: 2;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -200px;
+    top: -200px;
+    box-shadow: 0 0 1000px 350px #7ed3ff;
+    opacity: 0.5;
+    z-index: 2;
   }
 
   .content {
@@ -22,7 +33,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    //background-color: #E0F7FA;
 
     .left {
       display: flex;
@@ -131,32 +141,5 @@
         display: none;
       }
     }
-  }
-}
-
-.facebook {
-  background-color: #0866ff;
-  fill: white;
-
-  &:hover {
-    background-color: #0047ba;
-  }
-}
-
-.github {
-  background-color: #696969;
-  fill: #e6f0ff;
-
-  &:hover {
-    background-color: #4d4d4d;
-  }
-}
-
-.linkedin {
-  background-color: #0a66c2;
-  fill: #ececec;
-
-  &:hover {
-    background-color: #0057af;
   }
 }
