@@ -8,7 +8,7 @@ export const achievementData = [
 			},
 			{
 				label: "FCode Challenge 2024",
-				award: "Top 4"
+				award: "Top 3"
 			}
 		]
 	}
