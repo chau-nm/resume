@@ -56,7 +56,7 @@ const Home: FC = () => {
 						<span>👋 I'm N.M.Chau</span>
 					</div>
 					<div className={styles.position}>
-						<span>👉 Software Engineer 👈</span>
+						<span>👉 Software Developer 👈</span>
 					</div>
 					<ContactLinnk/>
 					<div className={styles["explore-button"]}>

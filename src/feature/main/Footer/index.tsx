@@ -10,7 +10,7 @@ const Footer: FC = () => (
     <div className={styles["content"]}>
       <div className={styles["left"]}>
         <Signature />
-        <span>Software Engineer</span>
+        <span>Software Developer</span>
       </div>
       <div className={styles["middle"]}>
         <Navigation />
@@ -21,7 +21,7 @@ const Footer: FC = () => (
     </div>
     <div className={styles["greeting"]}>
       <div className={styles["greeting-content"]}>
-        <span>I’m Chau, a software engineer.</span>
+        <span>I’m Chau, a software developer.</span>
         <br />
         <span>I’m very pleased to collaborate with you.</span>
       </div>

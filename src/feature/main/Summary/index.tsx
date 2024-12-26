@@ -56,7 +56,7 @@ const Summary: FC = () => {
           className={styles["content"]}
         >
           <p>
-            Hi, I'm Nguyen Minh Chau. I'm a Software Engineer with 2 years of
+            Hi, I'm Nguyen Minh Chau. I'm a Software Developer with 2 years of
             experience in developing and maintaining software applications. I
             have a strong foundation in Java, JavaScript & TypeScript, Python
             and PHP. I have worked on projects involving React, Spring boot,
