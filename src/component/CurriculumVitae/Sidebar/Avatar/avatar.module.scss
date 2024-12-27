@@ -5,4 +5,10 @@
   border-radius: 50%;
   margin: 50px auto;
   border: 5px solid #ffffff;
+  overflow: hidden;
+
+  img {
+    scale: 1.2;
+    transform: translate(3px, -10px);
+  }
 }
