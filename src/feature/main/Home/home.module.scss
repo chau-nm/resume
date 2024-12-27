@@ -11,19 +11,28 @@
     position: absolute;
     left: -250px;
     bottom: -250px;
-    box-shadow: 0 0 1000px 500px #7ed3ff;
     opacity: 0.5;
     z-index: 2;
+    animation: spreadOut 1.2s forwards ease-in;
   }
 
   &::before {
     content: '';
     position: absolute;
-    right: -200px;
-    top: -200px;
-    box-shadow: 0 0 1000px 350px #7ed3ff;
+    right: -250px;
+    top: -250px;
     opacity: 0.5;
     z-index: 2;
+    animation: spreadOut 2s forwards ease-in;
+  }
+
+  @keyframes spreadOut {
+    from {
+      box-shadow: 0 0 1000px 0 #7ed3ff;
+    }
+    to {
+      box-shadow: 0 0 1000px 500px #7ed3ff;
+    }
   }
 
   .content {
