@@ -26,8 +26,8 @@ export const RepositoryItem: FC<RepositoryItemProps> = ({
 			<div className={styles.bottom}>
 				<ul className={styles.technologies}>
 					{
-						technilogies.map((technology) => (
-							<li className={styles["technology-item"]}>
+						technilogies.map((technology, index) => (
+							<li key={index} className={styles["technology-item"]}>
 								<img src={technology} alt={""} height={30}/>
 							</li>
 						))

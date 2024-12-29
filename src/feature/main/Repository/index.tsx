@@ -51,8 +51,9 @@ const Repository: FC = () => {
 		<SectionWrapper sectionId="repository" title="Repository">
 			<div ref={repoRef} className={styles["item-wrapper"]}>
 				{
-					data.map((repo) => (
+					data.map((repo, index) => (
 						<RepositoryItem
+							key={index}
 							name={repo.name}
 							description={repo.description}
 							technilogies={repo.technologies}
