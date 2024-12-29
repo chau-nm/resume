@@ -1,0 +1,13 @@
+.item-wrapper {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 10px;
+}
+
+.more a {
+  display: block;
+  width: 100px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: auto;
+}

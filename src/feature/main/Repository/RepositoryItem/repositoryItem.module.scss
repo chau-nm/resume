@@ -1,0 +1,87 @@
+.repository-item {
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  box-sizing: border-box;
+  transition: scale 0.3s;
+
+  &:hover {
+    scale: 1.02;
+
+    .bottom .view-button a svg {
+      visibility: visible;
+    }
+
+    .bottom .view-button a svg.double-left {
+      animation: doubleLeftHoverLoop infinite 1s;
+    }
+    .bottom .view-button a svg.double-right {
+      animation: doubleRightHoverLoop infinite 1s;
+    }
+
+    @keyframes doubleLeftHoverLoop {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(8px);
+        opacity: 0.4;
+      }
+    }
+
+    @keyframes doubleRightHoverLoop {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-8px);
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .name {
+    margin-bottom: 20px;
+
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .description {
+    flex: 1;
+    margin-bottom: 20px;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .technologies {
+      display: flex;
+      gap: 5px;
+    }
+
+    .view-button a {
+      display: flex;
+      gap: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      svg {
+        visibility: hidden;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

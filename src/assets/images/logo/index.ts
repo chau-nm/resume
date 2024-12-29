@@ -27,6 +27,9 @@ export { default as FirebaseLogo } from "./firebase.png";
 export { default as AWSLogo } from "./aws.png";
 export { default as DockerLogo } from "./docker.png";
 
+export { default as Tetris } from "./tetris.png";
+export { default as Minesweeper } from "./mineswepper.png";
+
 export { default as HTMLSkill } from "./skill/html.png";
 export { default as CSSSkill } from "./skill/css.png";
 export { default as JavaScriptSkill } from "./skill/js.png";
@@ -34,3 +37,4 @@ export { default as JavaSkill } from "./skill/java.png";
 export { default as PythonSkill } from "./skill/python.png";
 export { default as DockerSkill } from "./skill/docker.png";
 export { default as PostgreSkill } from "./skill/postgre.png";
+
