@@ -1,7 +1,7 @@
 import {FC, useRef} from "react";
 import styles from "./skillBlock.module.scss";
 import {useGSAP} from "@gsap/react";
-import {tweenFromToScroll} from "../../../../libs/gsap";
+import {tweenFromToScroll} from "libs/gsap";
 
 type SkillBlockProps = {
 	title: string;

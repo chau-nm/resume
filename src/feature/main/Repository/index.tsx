@@ -4,8 +4,8 @@ import {data} from "./data";
 import {RepositoryItem} from "./RepositoryItem";
 import styles from "./repository.module.scss";
 import {useGSAP} from "@gsap/react";
-import {tweenFromToScroll} from "../../../libs/gsap";
-import {ButtonLink} from "../../../component/ButtonLink";
+import {tweenFromToScroll} from "libs/gsap";
+import {ButtonLink} from "component/ButtonLink";
 
 const Repository: FC = () => {
 	

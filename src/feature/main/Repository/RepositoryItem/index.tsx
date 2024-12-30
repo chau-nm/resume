@@ -1,6 +1,6 @@
 import {FC, ReactNode} from "react";
 import styles from "./repositoryItem.module.scss";
-import {DoubleLeftOutline, DoubleRightOutline} from "../../../../assets/icons";
+import {DoubleLeftOutline, DoubleRightOutline} from "assets/icons";
 
 type RepositoryItemProps = {
 	name: string;

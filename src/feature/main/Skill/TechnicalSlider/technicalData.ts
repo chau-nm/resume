@@ -8,7 +8,7 @@ import {
 	PostgreSkill,
 	PythonSkill,
 	TypeScriptLogo
-} from "../../../../assets/images/logo";
+} from "assets/images/logo";
 
 export const technicalData = [
 	{

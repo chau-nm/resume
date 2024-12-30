@@ -5,7 +5,7 @@ import {FormArea, FormInput, FormSubmit} from "component/Form/FormItem";
 import styles from "./contact.module.scss";
 import emailjs from '@emailjs/browser';
 import mailConfig from "mail/config.json";
-import {isEmail} from "../../../common/util";
+import {isEmail} from "common/util";
 
 export const Contact: FC = () => {
 	const handleSubmit = (fieldValues: Record<string, any>) => {

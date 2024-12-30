@@ -1,6 +1,6 @@
 import {FC, PropsWithChildren} from "react";
 import styles from "./formSubmit.module.scss";
-import Button from "../../../Button";
+import Button from "component/Button";
 
 export const FormSubmit: FC<PropsWithChildren> = ({
   children

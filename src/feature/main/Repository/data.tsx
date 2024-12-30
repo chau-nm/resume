@@ -6,7 +6,7 @@ import {
 	Minesweeper, MySQLLogo, ReactLogo, SpringLogo,
 	Tetris,
 	TypeScriptLogo
-} from "../../../assets/images/logo";
+} from "assets/images/logo";
 
 export const data = [
 	{

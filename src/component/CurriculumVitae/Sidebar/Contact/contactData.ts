@@ -5,7 +5,7 @@ import {
 	LinkedInOutline,
 	MailOutline,
 	PhoneOutline, ZaloOutline
-} from "../../../../assets/icons";
+} from "assets/icons";
 
 export const contactData = [
 	{

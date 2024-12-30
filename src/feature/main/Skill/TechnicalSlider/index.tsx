@@ -1,9 +1,9 @@
 import {createRef, ReactNode} from "react";
 import {TechnicalBlock} from "./TechnicalBlock"
 import {technicalData} from "./technicalData"
-import InfiniteSlider from "../../../../component/InfiniteSlider";
+import InfiniteSlider from "component/InfiniteSlider";
 import {useGSAP} from "@gsap/react";
-import {tweenFromToScroll} from "../../../../libs/gsap";
+import {tweenFromToScroll} from "libs/gsap";
 
 export const TechnicalSlider = () => {
 	const ref = createRef<HTMLDivElement>();
