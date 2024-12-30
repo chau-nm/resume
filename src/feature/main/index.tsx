@@ -14,6 +14,7 @@ import Repository from "./Repository";
 import Summary from "./Summary";
 // import Technical from "./Technical";
 import Skill from "./Skill";
+import {Contact} from "./Contact";
 
 const Main: FC = () => {
   const { section } = useParams();
@@ -66,6 +67,7 @@ const Main: FC = () => {
   return (
     <div className="main">
       <Header />
+      
       <Home />
       <Summary />
       <Album />
@@ -73,6 +75,8 @@ const Main: FC = () => {
       <Skill />
       <Experience />
       <Repository />
+      <Contact />
+      
       <Footer />
       {/* <SettingFAB /> */}
       {isVisibleScollTop && <ScrollTopButton />}

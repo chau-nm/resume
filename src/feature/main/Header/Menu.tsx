@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import ListSwitchButton from "component/ListSwitchButton";
-import {ALBUM, EXPERIENCE, HOME, REPOSITORY, SKILL, SUMMARY,} from "feature/main/sections";
+import {ALBUM, CONTACT, EXPERIENCE, HOME, REPOSITORY, SKILL, SUMMARY,} from "feature/main/sections";
 import {FC, useEffect, useRef, useState} from "react";
 import {Link} from "react-scroll";
 import styles from "./header.module.scss";
@@ -60,6 +60,11 @@ export const Menu: FC = () => {
         <li>
           <Link to={REPOSITORY} smooth duration={500}>
             Repository
+          </Link>
+        </li>
+        <li>
+          <Link to={CONTACT} smooth duration={500}>
+            Contact
           </Link>
         </li>
       </ul>
