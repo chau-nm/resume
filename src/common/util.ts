@@ -37,3 +37,12 @@ export const isInView = (element: HTMLElement | null): boolean => {
  * @returns 
  */
 export const isEvenNumber = (number: number) => number % 2 === 0
+
+/**
+ * Check the input is email or not
+ *
+ * @param email
+ */
+export const isEmail = (email: string) => {
+  return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+}

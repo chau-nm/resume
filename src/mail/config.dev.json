@@ -1,0 +1,6 @@
+{
+  "mailService": "MAIL SERVICE FROM EMAILJS",
+  "mailThankYouTemplate": "TEMPLATE FROM EMAILJS",
+  "mailFeedbackTemplate": "TEMPLATE FROM EMAILJS",
+  "publicKey": "PUBLIC KEY FROM EMAILJS"
+}
