@@ -15,6 +15,7 @@ import Summary from "./Summary";
 // import Technical from "./Technical";
 import Skill from "./Skill";
 import {Contact} from "./Contact";
+import SettingFAB from "./SettingFAB";
 
 const Main: FC = () => {
   const { section } = useParams();
@@ -78,7 +79,7 @@ const Main: FC = () => {
       <Contact />
       
       <Footer />
-      {/* <SettingFAB /> */}
+      <SettingFAB />
       {isVisibleScollTop && <ScrollTopButton />}
     </div>
   );
