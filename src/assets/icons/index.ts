@@ -14,3 +14,5 @@ export { ReactComponent as HomeOutline } from "./home.svg";
 export { ReactComponent as SettingOutline } from "./setting.svg";
 export { ReactComponent as ZaloOutline } from "./zalo.svg";
 export { ReactComponent as GlobalOutline } from "./global.svg";
+export { ReactComponent as SunOutline } from "./sun.svg";
+export { ReactComponent as MoonOutline } from "./moon.svg";
