@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, {useRef, useState} from "react";
 import styles from "./fab.module.scss";
+import {useGSAP} from "@gsap/react";
+import gsap from "gsap";
 
 interface FabChildProps {
   icon?: React.ReactNode;
@@ -12,6 +14,8 @@ export const FABChild: React.FC<FabChildProps> = ({
   children,
   onClick,
 }) => {
+  const fabRef = useRef(null);
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleChildFab = () => {
@@ -22,9 +26,23 @@ export const FABChild: React.FC<FabChildProps> = ({
     onClick?.();
     children && toggleChildFab();
   };
+  
+  useGSAP(() => {
+    gsap.fromTo(
+      fabRef.current,
+      {
+        opacity: 0,
+        y: 30
+      },
+      {
+        opacity: 1,
+        y: 0
+      }
+    );
+  })
 
   return (
-    <div className={styles["fab-child-container"]}>
+    <div ref={fabRef} className={styles["fab-child-container"]}>
       <button className={styles["fab-child-button"]} onClick={handleClick}>
         {icon}
       </button>

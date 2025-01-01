@@ -2,9 +2,7 @@ import {useGSAP} from "@gsap/react";
 import {DoubleLeftOutline, DoubleRightOutline} from "assets/icons";
 import classNames from "classnames";
 import {timelineScroll} from "libs/gsap";
-import {FC, ReactNode, useContext, useMemo, useRef} from "react";
-import {ThemeContext} from "../../theme/ThemeContext";
-import {ThemeEnum} from "../../theme/themeEnum";
+import {FC, ReactNode, useRef} from "react";
 
 type SectionWrapperProps = {
   sectionId: string;
@@ -20,11 +18,6 @@ export const SectionWrapper: FC<SectionWrapperProps> = ({
   children,
 }) => {
   const titleRef = useRef<HTMLDivElement>(null);
-  const {theme} = useContext(ThemeContext);
-  
-  const doubleColor = useMemo(() => {
-    return theme === ThemeEnum.LIGHT ? "#7F7F7F" : "#1E90FF";
-  }, [theme])
 
   useGSAP(() => {
     if (!titleRef.current) return;
@@ -56,10 +49,10 @@ export const SectionWrapper: FC<SectionWrapperProps> = ({
     timeline.fromTo(
       target,
       {
-        fill: "none",
+        scale: 0,
       },
       {
-        fill: doubleColor,
+        scale: 1
       }
     );
   };
