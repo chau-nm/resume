@@ -1,4 +1,3 @@
-import {CaretDownOutLine} from "assets/icons";
 import IllustrationCoder from "assets/images/illustration_coder.png";
 import NextSectionButton from "component/NextSectionButton";
 import {createRef, FC, useRef} from "react";
@@ -61,7 +60,10 @@ const Home: FC = () => {
 					<ContactLinnk/>
 					<div className={styles["explore-button"]}>
 						<Link to={SUMMARY} smooth duration={500}>
-							<CaretDownOutLine/>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
 							Explore Now
 						</Link>
 					</div>
