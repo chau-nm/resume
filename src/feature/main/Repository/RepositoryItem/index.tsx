@@ -10,11 +10,11 @@ type RepositoryItemProps = {
 }
 
 export const RepositoryItem: FC<RepositoryItemProps> = ({
-	                                                        name,
-	                                                        link,
-	                                                        description,
-	                                                        technilogies
-                                                        }) => {
+	name,
+	link,
+	description,
+	technilogies
+}) => {
 	return (
 		<div className={styles["repository-item"]}>
 			<div className={styles.name}>

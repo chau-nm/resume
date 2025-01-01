@@ -1,11 +1,12 @@
+@import "theme/sass/theme";
+
 .repository-item {
   display: flex;
   flex-direction: column;
   min-height: 150px;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+
   border-radius: 4px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
   padding: 15px;
   box-sizing: border-box;
   transition: scale 0.3s;
@@ -71,6 +72,12 @@
     .technologies {
       display: flex;
       gap: 5px;
+
+      .technology-item img {
+        background-color: #ffffff;
+        padding: 3px;
+        border-radius: 3px;
+      }
     }
 
     .view-button a {
@@ -84,5 +91,19 @@
         font-size: 1.2rem;
       }
     }
+  }
+}
+
+:global(.theme-dark) {
+  .repository-item {
+    border: $darkBorder;
+    box-shadow: $darkShadow;
+  }
+}
+
+:global(.theme-light) {
+  .repository-item {
+    border: $lightBorder;
+    box-shadow: $lightShadow;
   }
 }

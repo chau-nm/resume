@@ -4,22 +4,23 @@
   height: 50px;
   align-items: center;
   justify-content: center;
-  background-color: rgb(0, 19, 232);
   transition: 0.3s;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
   border-radius: 5px;
-  box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.6);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   animation: display 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.7;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   }
 
   svg {
-    fill: #ffffff;
+    background-color: transparent;
+    fill: #333333;
     width: 20px;
     height: 20px;
   }
@@ -30,6 +31,26 @@
     }
     100% {
       transform: scale(1);
+    }
+  }
+}
+
+:global(.theme-dark) {
+  .scroll-top-btn {
+    background-color: #E0E0E0;
+
+    svg {
+      fill: #333333;
+    }
+  }
+}
+
+:global(.theme-light) {
+  .scroll-top-btn {
+    background-color: #007BFF;
+
+    svg {
+      fill: #FFFFFF;
     }
   }
 }

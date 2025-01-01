@@ -20,7 +20,7 @@ export const experienceData: ExperienceSectionType[] = [
   {
     title: (
       <>
-        <img src={FujinetLogo} alt="" height={"30px"} />
+        <img src={FujinetLogo} alt="" height={"30px"} style={{ borderRadius: 3 }}/>
         <span>Fujinet System JSC (2/2023 - 1/2025)</span>
       </>
     ),

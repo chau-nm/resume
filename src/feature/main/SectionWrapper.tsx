@@ -23,7 +23,7 @@ export const SectionWrapper: FC<SectionWrapperProps> = ({
   const {theme} = useContext(ThemeContext);
   
   const doubleColor = useMemo(() => {
-    return theme === ThemeEnum.LIGHT ? "#000000" : "#ffffff";
+    return theme === ThemeEnum.LIGHT ? "#7F7F7F" : "#1E90FF";
   }, [theme])
 
   useGSAP(() => {
@@ -48,7 +48,7 @@ export const SectionWrapper: FC<SectionWrapperProps> = ({
         scale: 0,
         opacity: 0,
       },
-      { scale: 1, opacity: 0.7 }
+      { scale: 1, opacity: 1 }
     );
   };
 

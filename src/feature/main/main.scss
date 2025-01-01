@@ -1,3 +1,4 @@
+@import url(assets/sass/contact.scss);
 @import "theme/sass/theme";
 
 .section {
@@ -21,7 +22,6 @@
       text-align: center;
       text-transform: uppercase;
       font-family: "alegreya";
-      opacity: 0.7;
     }
 
     svg {
@@ -42,13 +42,31 @@
 }
 
 .theme-dark {
-  .section .title .line {
+  .section .title {
+    h3 {
+      background: linear-gradient(135deg, #1E90FF, #32CD32);
+      background-clip: text;
+      color: transparent;
+    }
+
+    .line {
       background-color: $darkLineColor;
+      box-shadow: $darkShadow;
+    }
   }
 }
 
 .theme-light {
-  .section .title .line {
-    background-color: $lightLineColor;
+  .section .title {
+    h3 {
+      background: $lightTitleColor;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .line {
+      background-color: $lightLineColor;
+      box-shadow: $lightShadow;
+    }
   }
 }

@@ -1,5 +1,4 @@
 .footer {
-  background-color: rgb(0, 0, 67);
   padding: 30px;
 
   * {
@@ -114,6 +113,20 @@
       .right svg {
         display: none;
       }
+    }
+  }
+}
+
+:global(.theme-light) {
+  .footer {
+    background-color: #003366;
+
+    *:not(
+      :global(.facebook), :global(.facebook) *,
+      :global(.github), :global(.github) *,
+      :global(.linkedin), :global(.linkedin) *
+      ) {
+      background-color: #003366;
     }
   }
 }

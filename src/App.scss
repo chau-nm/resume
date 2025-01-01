@@ -1,4 +1,3 @@
-@import url(assets/sass/contact.scss);
 @import "theme/sass/theme";
 
 * {
@@ -22,18 +21,12 @@ a {
   }
 }
 
-.theme-dark {
+.theme-dark * {
   background-color: $darkBackgroundColor;
-
-  * {
-    color: $darkTextColor;
-  }
+  color: $darkTextColor;
 }
 
-.theme-light {
+.theme-light * {
   background-color: $lightBackgroundColor;
-
-  * {
-    color: $lightTextColor;
-  }
+  color: $lightTextColor;
 }

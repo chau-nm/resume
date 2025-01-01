@@ -2,6 +2,10 @@
   background-color: #0866ff;
   fill: white;
 
+  svg {
+    background-color: transparent;
+  }
+
   &:hover {
     background-color: #0047ba;
   }
@@ -11,6 +15,10 @@
   background-color: #696969;
   fill: #e6f0ff;
 
+  svg {
+    background-color: transparent;
+  }
+
   &:hover {
     background-color: #4d4d4d;
   }
@@ -19,6 +27,10 @@
 .linkedin {
   background-color: #0a66c2;
   fill: #ececec;
+
+  svg {
+    background-color: transparent;
+  }
 
   &:hover {
     background-color: #0057af;

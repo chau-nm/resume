@@ -1,3 +1,5 @@
+@import "theme/sass/theme";
+
 .section {
   padding: 0 20px;
 
@@ -29,10 +31,6 @@
           height: 15px;
           border-radius: 50%;
           cursor: pointer;
-          background-color: rgba($color: blue, $alpha: 0.9);
-          box-shadow: 
-            3px 3px 10px rgba($color: blue, $alpha: 0.6),
-            -3px -3px 10px rgba($color: blue, $alpha: 0.6);
 
           &-title {
             position: absolute;
@@ -82,7 +80,6 @@
         .line {
           width: 2px;
           height: 100%;
-          background-color: rgba($color: blue, $alpha: 0.6);
         }
       }
 
@@ -114,10 +111,12 @@
 
               .technical-item {
                 height: 30px;
-                box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.2);
+                border-radius: 3px;
+                overflow: hidden;
 
                 img {
                   height: 100%;
+                  background-color: #ffffff;
                 }
               }
             }
@@ -128,5 +127,33 @@
 
     }
 
+  }
+}
+
+:global(.theme-dark) {
+  .technical-item {
+    box-shadow: $darkShadow;
+  }
+
+  .dot {
+    background: linear-gradient(135deg, #A4C8E1, #A8E6CE);
+  }
+
+  .line {
+    background: linear-gradient(135deg, #A4C8E1, #A8E6CE);
+  }
+}
+
+:global(.theme-light) {
+  .technical-item {
+    box-shadow: $lightShadow;
+  }
+
+  .dot {
+    background: #007BFF;
+  }
+
+  .line {
+    background: #007BFF;
   }
 }

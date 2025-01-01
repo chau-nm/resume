@@ -4,9 +4,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: transparent;
+  z-index: 100;
   animation-name: headerAnimation;
   animation-duration: 1s;
-  z-index: 100;
+
+  * {
+    background-color: transparent;
+  }
 
   .signature {
     padding: 20px 8%;
