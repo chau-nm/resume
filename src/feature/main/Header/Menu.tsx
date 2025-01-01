@@ -42,11 +42,11 @@ export const Menu: FC = () => {
             Summary
           </Link>
         </li>
-        <li>
-          <Link to={ALBUM} smooth duration={500}>
-            Album
-          </Link>
-        </li>
+        {/*<li>*/}
+        {/*  <Link to={ALBUM} smooth duration={500}>*/}
+        {/*    Album*/}
+        {/*  </Link>*/}
+        {/*</li>*/}
         <li>
           <Link to={SKILL} smooth duration={500}>
             Skill

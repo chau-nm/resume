@@ -1,10 +1,9 @@
 import * as mainSectionPath from "common/mainSectionPath";
-import { isInView, scrollInView } from "common/util";
+import {isInView, scrollInView} from "common/util";
 import ScrollTopButton from "component/ScrollTopButton";
-import { FC, useEffect, useState } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import {FC, useEffect, useState} from "react";
+import {useLocation, useNavigate, useParams} from "react-router-dom";
 import PageNotFound from "../404";
-import Album from "./Album";
 import Experience from "./Experience";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -68,16 +67,16 @@ const Main: FC = () => {
   return (
     <div className="main">
       <Header />
-      
+
       <Home />
       <Summary />
-      <Album />
+      {/* <Album /> */}
       {/* <Technical /> */}
       <Skill />
       <Experience />
       <Repository />
       <Contact />
-      
+
       <Footer />
       <SettingFAB />
       {isVisibleScollTop && <ScrollTopButton />}

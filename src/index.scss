@@ -1,5 +1,5 @@
 @import url(assets/sass/font.scss);
-@import url(assets/sass/_variable.scss);
+@import "theme/sass/theme";
 
 body {
   margin: 0;
@@ -12,10 +12,10 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #9d9d9d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;  
+  background: #3b3b3b;
   border-radius: 10px;
 }

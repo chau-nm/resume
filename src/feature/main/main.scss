@@ -1,3 +1,5 @@
+@import "theme/sass/theme";
+
 .section {
   padding: 20px 18%;
   overflow: hidden;
@@ -36,5 +38,17 @@
 @media screen and (max-width: 1240px) {
   .section {
     padding: 20px 0;
+  }
+}
+
+.theme-dark {
+  .section .title .line {
+      background-color: $darkLineColor;
+  }
+}
+
+.theme-light {
+  .section .title .line {
+    background-color: $lightLineColor;
   }
 }
