@@ -8,5 +8,19 @@
       "repository": "Dự án",
       "contact": "Liên lạc"
     }
+  },
+  "home": {
+    "greeting": "Xin chào, tôi là",
+    "position": {
+      "top": "Software",
+      "bottom": "Developer"
+    },
+    "maxim": "Người cung cấp các giải pháp chất lượng cao vượt mong đợi và thúc đẩy thành công.",
+    "explore": "Khám phá ngay"
+  },
+  "about": {
+    "title": "GIỚI THIỆU",
+    "content": "Xin chào, tôi là Nguyễn Minh Châu. Tôi là một software developer với 2 năm kinh nghiệm trong việc phát triển và bảo trì các ứng dụng phần mềm. Tôi có nền tảng vững chắc về Java, JavaScript & TypeScript, Python và PHP. Tôi đã làm việc trên các dự án liên quan đến React, Spring boot, Yii2, NestJS. Tôi đam mê tạo ra các giải pháp phần mềm hiệu quả và có thể mở rộng.",
+    "viewCv": "Xem CV"
   }
 }

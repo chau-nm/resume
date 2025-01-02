@@ -7,6 +7,7 @@ import { SectionWrapper } from "../SectionWrapper";
 import styles from "./about.module.scss";
 import {useNavigate} from "react-router-dom";
 import { CV } from "common/path";
+import {useTranslation} from "react-i18next";
 
 enum refNames {
   about = "about",
@@ -17,6 +18,7 @@ enum refNames {
 const About: FC = () => {
   const { getRef, setRef } = useMultipleRef<HTMLDivElement | null>();
   const navigate = useNavigate();
+  const {t} = useTranslation();
 
   useGSAP(() => {
     const timeline = timelineScroll(getRef(refNames.about));
@@ -47,7 +49,7 @@ const About: FC = () => {
   return (
     <SectionWrapper
       sectionId="about"
-      title="ABOUT"
+      title={t("about.title")}
       className={styles["about"]}
     >
       <div ref={(element) => setRef(refNames.about, element)}>
@@ -55,20 +57,13 @@ const About: FC = () => {
           ref={(element) => setRef(refNames.content, element)}
           className={styles["content"]}
         >
-          <p>
-            Hi, I'm Nguyen Minh Chau. I'm a Software Developer with 2 years of
-            experience in developing and maintaining software applications. I
-            have a strong foundation in Java, JavaScript & TypeScript, Python
-            and PHP. I have worked on projects involving React, Spring boot,
-            Yii2, NestJS. I am passionate about creating efficient and scalable
-            software solutions.
-          </p>
+          <p>{t("about.content")}</p>
         </div>
         <div
           ref={(element) => setRef(refNames.button, element)}
           className={styles["view-cv-button"]}
         >
-          <Button onClick={handleMoveViewCV}>View CV</Button>
+          <Button onClick={handleMoveViewCV}>{t("about.viewCv")}</Button>
         </div>
       </div>
     </SectionWrapper>

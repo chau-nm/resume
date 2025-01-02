@@ -4,10 +4,12 @@ import {ContactLinnk} from "./ContactLink";
 import styles from "./home.module.scss";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
-import {ExplorerButton} from "./ExplorerButton";
+import {useTranslation} from "react-i18next";
+import {ExploreButton} from "./ExploreButton";
 
 const Home: FC = () => {
 	
+	const {t} = useTranslation();
 	const leftRef = useRef(null);
 	const rightRef = useRef(null);
 	const moveRef = createRef<HTMLDivElement>();
@@ -50,21 +52,21 @@ const Home: FC = () => {
 			<div className={styles.content}>
 				<div ref={leftRef} className={styles.left}>
 					<div className={styles.greeting}>
-						<span>Hi there, I'm</span>
+						<span>{t("home.greeting")}</span>
 					</div>
 					<div className={styles.position}>
 						<h3 className={styles.top}>
-							Software
+							{t("home.position.top")}
 						</h3>
 						<h3 className={styles.bottom}>
-							Developer
+							{t("home.position.bottom")}
 						</h3>
 					</div>
 					<div className={styles.maxim}>
-						<span>Who delivers high-quality solutions that exceed expectations and drive success.</span>
+						<span>{t("home.maxim")}</span>
 					</div>
 					<ContactLinnk/>
-					<ExplorerButton />
+					<ExploreButton />
 				</div>
 				<div ref={rightRef} className={styles.right}>
 					<img src={IllustrationCoder} alt=""/>
