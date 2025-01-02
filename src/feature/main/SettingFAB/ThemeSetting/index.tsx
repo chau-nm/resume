@@ -19,11 +19,11 @@ export const ThemeSetting: FC = () => {
     const Icon = useMemo(() => {
         switch (theme) {
             case ThemeEnum.DARK:
-                return <MoonOutline style={{width: 20, height: 20}}/>;
+                return <MoonOutline style={{width: 20, height: 20, fill: "#FFFFFF"}}/>;
             case ThemeEnum.LIGHT:
-                return <SunOutline style={{width: 20, height: 20, fill: "#FFFFFF"}}/>
+                return <SunOutline style={{width: 20, height: 20, fill: "yellow"}}/>
             default:
-                return <MoonOutline style={{width: 20, height: 20}}/>;
+                return <MoonOutline style={{width: 20, height: 20, fill: "#FFFFFF"}}/>;
         }
     }, [theme])
     
