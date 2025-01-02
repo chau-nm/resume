@@ -1,14 +1,20 @@
 import {SectionWrapper} from "../SectionWrapper";
 import {SkillBlock} from "./SkillBlock";
-import {skillData} from "./skillData";
+import {getSkillData} from "./skillData";
 import styles from "./skill.module.scss";
 import {TechnicalSlider} from "./TechnicalSlider";
+import {useTranslation} from "react-i18next";
+import {useMemo} from "react";
 
 const Skill = () => {
+	const {t} = useTranslation();
+	
+	const skillData = useMemo(() => getSkillData(t), [t])
+	
 	return (
 		<SectionWrapper
 			sectionId="skill"
-			title="SKILL"
+			title={t("skill.title")}
 			className={styles.skill}>
 			<div className={styles["block-wrapper"]}>
 				{

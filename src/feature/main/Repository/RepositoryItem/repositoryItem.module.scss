@@ -4,9 +4,7 @@
   display: flex;
   flex-direction: column;
   min-height: 150px;
-
   border-radius: 4px;
-
   padding: 15px;
   box-sizing: border-box;
   transition: scale 0.3s;
@@ -21,6 +19,7 @@
     .bottom .view-button a svg.double-left {
       animation: doubleLeftHoverLoop infinite 1s;
     }
+
     .bottom .view-button a svg.double-right {
       animation: doubleRightHoverLoop infinite 1s;
     }
@@ -98,6 +97,10 @@
   .repository-item {
     border: $darkBorder;
     box-shadow: $darkShadow;
+
+    img {
+      box-shadow: $darkShadow;
+    }
   }
 }
 
@@ -105,5 +108,9 @@
   .repository-item {
     border: $lightBorder;
     box-shadow: $lightShadow;
+
+    &, * {
+      background-color: #FFFFFF;
+    }
   }
 }

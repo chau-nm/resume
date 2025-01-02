@@ -32,5 +32,9 @@
     .block {
         border: $lightBorder;
         box-shadow: $lightShadow;
+
+        &, * {
+            background-color: #FFFFFF;
+        }
     }
 }
