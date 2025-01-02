@@ -1,4 +1,4 @@
-import { FC, PointerEventHandler, useMemo, useState } from "react";
+import {FC, PointerEventHandler, ReactNode, useMemo, useState} from "react";
 import styles from "./slider.module.scss";
 import classNames from "classnames";
 import { DoubleLeftOutline, DoubleRightOutline } from "assets/icons";
@@ -8,7 +8,7 @@ import { timelineScroll } from "libs/gsap";
 import gsap from "gsap";
 
 type SliderProps = {
-  items: React.ReactNode[];
+  items: ReactNode[];
 };
 
 enum refNames {

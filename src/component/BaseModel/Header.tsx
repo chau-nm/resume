@@ -1,9 +1,9 @@
-import { FC } from "react";
+import {FC, ReactNode} from "react";
 import styles from "./baseModel.module.scss";
 import { XMarkOutline } from "assets/icons";
 
 type HeaderProps = {
-  title: React.ReactNode;
+  title: ReactNode;
   handleClose: () => void;
 };
 

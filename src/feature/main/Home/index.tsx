@@ -1,24 +1,24 @@
 import IllustrationCoder from "assets/images/illustration_coder.png";
-import {createRef, FC, useRef} from "react";
+import {FC, useRef} from "react";
 import {ContactLinnk} from "./ContactLink";
 import styles from "./home.module.scss";
 import {useGSAP} from "@gsap/react";
-import gsap from "gsap";
 import {useTranslation} from "react-i18next";
 import {ExploreButton} from "./ExploreButton";
+import {timelineScroll} from "../../../libs/gsap";
 
 const Home: FC = () => {
 	
 	const {t} = useTranslation();
 	const leftRef = useRef(null);
 	const rightRef = useRef(null);
-	const moveRef = createRef<HTMLDivElement>();
+	// const moveRef = createRef<HTMLDivElement>();
 	
 	useGSAP(() => {
-		const timeline = gsap.timeline();
+		const timeline = timelineScroll();
 		applyLeftTween(timeline);
 		applyRightTween(timeline);
-		applyMoveTween(timeline);
+		// applyMoveTween(timeline);
 	})
 	
 	const applyLeftTween = (timeline: GSAPTimeline) => {
@@ -38,14 +38,14 @@ const Home: FC = () => {
 		);
 	}
 	
-	const applyMoveTween = (timeline: GSAPTimeline) => {
-		timeline.fromTo(
-			moveRef.current,
-			{y: -10, opacity: 0},
-			{x: 0, opacity: 1, duration: 1},
-			1
-		);
-	}
+	// const applyMoveTween = (timeline: GSAPTimeline) => {
+	// 	timeline.fromTo(
+	// 		moveRef.current,
+	// 		{y: -10, opacity: 0},
+	// 		{x: 0, opacity: 1, duration: 1},
+	// 		1
+	// 	);
+	// }
 	
 	return (
 		<div id="home" className={styles.home}>
@@ -66,7 +66,7 @@ const Home: FC = () => {
 						<span>{t("home.maxim")}</span>
 					</div>
 					<ContactLinnk/>
-					<ExploreButton />
+					<ExploreButton/>
 				</div>
 				<div ref={rightRef} className={styles.right}>
 					<img src={IllustrationCoder} alt=""/>

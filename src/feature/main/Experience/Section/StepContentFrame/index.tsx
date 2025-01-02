@@ -39,7 +39,7 @@ export const StepContentFrame: FC<StepContentFrameProps> = ({
       </i>
 		</div>
 		<div className={styles.summary}>
-			<p>{summary}</p>
+			{summary}
 		</div>
 		<div className={styles.detail}>
 			<ul>
