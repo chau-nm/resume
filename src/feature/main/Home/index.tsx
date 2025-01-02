@@ -1,12 +1,12 @@
 import IllustrationCoder from "assets/images/illustration_coder.png";
 import NextSectionButton from "component/NextSectionButton";
 import {createRef, FC, useRef} from "react";
-import {Link} from "react-scroll";
-import {SUMMARY} from "../sections";
 import {ContactLinnk} from "./ContactLink";
 import styles from "./home.module.scss";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
+import {ABOUT} from "../sections";
+import {ExplorerButton} from "./ExplorerButton";
 
 const Home: FC = () => {
 	
@@ -58,21 +58,13 @@ const Home: FC = () => {
 						<span>👉 Software Developer 👈</span>
 					</div>
 					<ContactLinnk/>
-					<div className={styles["explore-button"]}>
-						<Link to={SUMMARY} smooth duration={500}>
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							Explore Now
-						</Link>
-					</div>
+					<ExplorerButton />
 				</div>
 				<div ref={rightRef} className={styles.right}>
 					<img src={IllustrationCoder} alt=""/>
 				</div>
 			</div>
-			<NextSectionButton ref={moveRef} title="SUMMARY" path={"summary"}/>
+			<NextSectionButton ref={moveRef} title="ABOUT ME" path={ABOUT}/>
 		</div>
 	)
 };

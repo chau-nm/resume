@@ -1,0 +1,12 @@
+{
+  "header": {
+    "menu" : {
+      "home": "Trang chủ",
+      "about": "Giới thiệu",
+      "skill": "Kỹ năng",
+      "experience": "Kinh nghiệm",
+      "repository": "Dự án",
+      "contact": "Liên lạc"
+    }
+  }
+}

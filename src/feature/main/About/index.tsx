@@ -4,22 +4,22 @@ import { useMultipleRef } from "hook";
 import { timelineScroll } from "libs/gsap";
 import { FC } from "react";
 import { SectionWrapper } from "../SectionWrapper";
-import styles from "./summary.module.scss";
+import styles from "./about.module.scss";
 import {useNavigate} from "react-router-dom";
 import { CV } from "common/path";
 
 enum refNames {
-  summary = "summary",
+  about = "about",
   content = "content",
   button = "button",
 }
 
-const Summary: FC = () => {
+const About: FC = () => {
   const { getRef, setRef } = useMultipleRef<HTMLDivElement | null>();
   const navigate = useNavigate();
 
   useGSAP(() => {
-    const timeline = timelineScroll(getRef(refNames.summary));
+    const timeline = timelineScroll(getRef(refNames.about));
     applyContentTween(timeline);
     applyButtonTween(timeline);
   });
@@ -46,11 +46,11 @@ const Summary: FC = () => {
 
   return (
     <SectionWrapper
-      sectionId="summary"
-      title="SUMMARY"
-      className={styles["summary"]}
+      sectionId="about"
+      title="ABOUT"
+      className={styles["about"]}
     >
-      <div ref={(element) => setRef(refNames.summary, element)}>
+      <div ref={(element) => setRef(refNames.about, element)}>
         <div
           ref={(element) => setRef(refNames.content, element)}
           className={styles["content"]}
@@ -75,4 +75,4 @@ const Summary: FC = () => {
   );
 };
 
-export default Summary;
+export default About;

@@ -1,0 +1,12 @@
+{
+  "header": {
+    "menu" : {
+      "home": "Home",
+      "about": "About",
+      "skill": "Skill",
+      "experience": "Experience",
+      "repository": "Repository",
+      "contact": "Contact"
+    }
+  }
+}

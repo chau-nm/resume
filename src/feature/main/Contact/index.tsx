@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 import mailConfig from "mail/config.json";
 import {isEmail} from "common/util";
 
-export const Contact: FC = () => {
+const Contact: FC = () => {
 	const handleSubmit = (fieldValues: Record<string, any>) => {
 		if (!isValid(fieldValues)) {
 			return;
@@ -93,3 +93,5 @@ export const Contact: FC = () => {
 		</SectionWrapper>
 	)
 }
+
+export default Contact;

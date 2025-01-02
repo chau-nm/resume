@@ -1,7 +1,7 @@
-import { FC } from "react";
+import {FC} from "react";
 import styles from "./footer.module.scss";
-import { Link } from "react-scroll";
-import { ALBUM, EXPERIENCE, HOME, REPOSITORY, SUMMARY } from "../sections";
+import {Link} from "react-scroll";
+import {ABOUT, ALBUM, EXPERIENCE, HOME, REPOSITORY} from "../sections";
 
 export const Navigation: FC = () => (
   <>
@@ -13,8 +13,8 @@ export const Navigation: FC = () => (
         </Link>
       </li>
       <li>
-        <Link to={SUMMARY} smooth duration={500}>
-          Summary
+        <Link to={ABOUT} smooth duration={500}>
+          About
         </Link>
       </li>
       <li>

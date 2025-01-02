@@ -3,18 +3,20 @@ import {isInView, scrollInView} from "common/util";
 import ScrollTopButton from "component/ScrollTopButton";
 import {FC, useEffect, useState} from "react";
 import {useLocation, useNavigate, useParams} from "react-router-dom";
+
 import PageNotFound from "../404";
 import Experience from "./Experience";
 import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./Home";
-import "./main.scss";
-import Repository from "./Repository";
-import Summary from "./Summary";
+import About from "./About";
 // import Technical from "./Technical";
 import Skill from "./Skill";
-import {Contact} from "./Contact";
+import Repository from "./Repository";
+import Contact from "./Contact";
 import SettingFAB from "./SettingFAB";
+
+import "./main.scss";
 
 const Main: FC = () => {
   const { section } = useParams();
@@ -23,7 +25,6 @@ const Main: FC = () => {
   const availablePath = Object.values(mainSectionPath) as string[];
   const [isVisibleScollTop, setIsVisibleScrollTop] = useState(false);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (window.scrollY > 100) {
       if (!isVisibleScollTop) setIsVisibleScrollTop(true);
@@ -40,7 +41,6 @@ const Main: FC = () => {
       return;
     }
     scrollInView(sectionPath);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -69,7 +69,7 @@ const Main: FC = () => {
       <Header />
 
       <Home />
-      <Summary />
+      <About />
       {/* <Album /> */}
       {/* <Technical /> */}
       <Skill />

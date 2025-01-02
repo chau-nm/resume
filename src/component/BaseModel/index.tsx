@@ -1,14 +1,14 @@
 import Button from "component/Button";
-import { FC, ReactNode, useEffect, useState } from "react";
+import {FC, ReactNode, useEffect, useState} from "react";
 import styles from "./baseModel.module.scss";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
+import {Footer} from "./Footer";
+import {Header} from "./Header";
 
 type BaseModelProps = {
   className?: string;
   contentClassName?: string;
   title: string;
-  icon?: React.SVGProps<SVGElement>;
+  icon?: ReactNode;
   visible?: boolean;
   children?: ReactNode;
   handleClose?: () => void;
@@ -61,11 +61,11 @@ const BaseModel: FC<BaseModelProps> = ({
       <div className={modelClassNames}>
         <Header
           title={
-            <>
+            <div>
               {icon}
               {""}
               {title}
-            </>
+            </div>
           }
           handleClose={close}
         />
