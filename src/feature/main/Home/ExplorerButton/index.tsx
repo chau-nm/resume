@@ -1,6 +1,6 @@
 import {Link} from "react-scroll";
-import {ABOUT} from "../sections";
-import styles from "./home.module.scss";
+import styles from "./explorerButton.module.scss";
+import {ABOUT} from "../../sections";
 
 export const ExplorerButton = () => (
 	<div className={styles["explore-button"]}>

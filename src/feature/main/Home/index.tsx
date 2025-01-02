@@ -1,11 +1,9 @@
 import IllustrationCoder from "assets/images/illustration_coder.png";
-import NextSectionButton from "component/NextSectionButton";
 import {createRef, FC, useRef} from "react";
 import {ContactLinnk} from "./ContactLink";
 import styles from "./home.module.scss";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
-import {ABOUT} from "../sections";
 import {ExplorerButton} from "./ExplorerButton";
 
 const Home: FC = () => {
@@ -24,8 +22,8 @@ const Home: FC = () => {
 	const applyLeftTween = (timeline: GSAPTimeline) => {
 		timeline.fromTo(
 			leftRef.current,
-			{y: 10, opacity: 0.2},
-			{y: 0, opacity: 1, duration: 1}
+			{y: 20, opacity: 0.2},
+			{y: 0, opacity: 1, duration: 2}
 		);
 	}
 	
@@ -52,10 +50,18 @@ const Home: FC = () => {
 			<div className={styles.content}>
 				<div ref={leftRef} className={styles.left}>
 					<div className={styles.greeting}>
-						<span>👋 I'm N.M.Chau</span>
+						<span>Hi there, I'm</span>
 					</div>
 					<div className={styles.position}>
-						<span>👉 Software Developer 👈</span>
+						<h3 className={styles.top}>
+							Software
+						</h3>
+						<h3 className={styles.bottom}>
+							Developer
+						</h3>
+					</div>
+					<div className={styles.maxim}>
+						<span>Who delivers high-quality solutions that exceed expectations and drive success.</span>
 					</div>
 					<ContactLinnk/>
 					<ExplorerButton />
@@ -64,7 +70,7 @@ const Home: FC = () => {
 					<img src={IllustrationCoder} alt=""/>
 				</div>
 			</div>
-			<NextSectionButton ref={moveRef} title="ABOUT ME" path={ABOUT}/>
+			{/*<NextSectionButton ref={moveRef} title="ABOUT ME" path={ABOUT}/>*/}
 		</div>
 	)
 };

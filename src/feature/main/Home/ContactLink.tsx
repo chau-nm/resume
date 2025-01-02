@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./home.module.scss";
-import { FacebookOutLine, GithubOutLine, LinkedInOutline } from "assets/icons";
+import {FacebookOutLine, GithubOutLine, LinkedInOutline, ZaloOutline} from "assets/icons";
 
 export const ContactLinnk: FC = () => (
   <div className={styles["contact-link"]}>
@@ -12,7 +12,7 @@ export const ContactLinnk: FC = () => (
           rel="noreferrer"
           className="facebook"
         >
-          <FacebookOutLine />
+          <FacebookOutLine/>
         </a>
       </li>
       <li>
@@ -22,7 +22,7 @@ export const ContactLinnk: FC = () => (
           rel="noreferrer"
           className="github"
         >
-          <GithubOutLine />
+          <GithubOutLine/>
         </a>
       </li>
       <li>
@@ -32,7 +32,17 @@ export const ContactLinnk: FC = () => (
           rel="noreferrer"
           className="linkedin"
         >
-          <LinkedInOutline />
+          <LinkedInOutline/>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://zalo.me/0865703869"
+          target="_blank"
+          rel="noreferrer"
+          className="zalo"
+        >
+          <ZaloOutline />
         </a>
       </li>
     </ul>
