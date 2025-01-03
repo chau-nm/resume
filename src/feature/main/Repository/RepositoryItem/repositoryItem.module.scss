@@ -72,10 +72,14 @@
       display: flex;
       gap: 5px;
 
-      .technology-item img {
+      .technology-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 33px;
         background-color: #ffffff;
-        padding: 3px;
         border-radius: 3px;
+        padding: 3px;
       }
     }
 
@@ -96,9 +100,8 @@
 :global(.theme-dark) {
   .repository-item {
     border: $darkBorder;
-    box-shadow: $darkShadow;
 
-    img {
+    &, .technology-item {
       box-shadow: $darkShadow;
     }
   }
