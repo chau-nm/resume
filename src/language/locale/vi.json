@@ -75,6 +75,10 @@
   "contact": {
     "title": "LIÊN HỆ",
     "sendFeedback": "GỬI PHẢN HỒI",
+    "requiredError": "Bạn chưa điền {{fieldName}}.",
+    "notValidEmail": "Email không hợp lệ.",
+    "sendingFeedbackMail": "Đang gửi mail phản hồi...",
+    "sentFeedbackMail": "Đã gửi mail phản hồi.",
     "field": {
       "name": {
         "label": "Tên của bạn",

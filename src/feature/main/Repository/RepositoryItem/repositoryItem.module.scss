@@ -108,9 +108,6 @@
   .repository-item {
     border: $lightBorder;
     box-shadow: $lightShadow;
-
-    &, * {
-      background-color: #FFFFFF;
-    }
+    background-color: #FFFFFF;
   }
 }

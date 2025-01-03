@@ -10,7 +10,7 @@ export const FormInput:FC<FormInputProps & InputHTMLAttributes<HTMLInputElement>
 	label,
 	...rest
 }) => {
-	const { setFieldValue } = useContext(FormContext);
+	const { fieldValues, setFieldValue } = useContext(FormContext);
 	
 	const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
 		if (rest.name) {
@@ -21,7 +21,7 @@ export const FormInput:FC<FormInputProps & InputHTMLAttributes<HTMLInputElement>
 	return (
 		<div className={styles["form-input"]}>
 			<label>{label}</label><br/>
-			<input onChange={handleChange} {...rest}/>
+			<input value={fieldValues[rest.name ?? ""]} onChange={handleChange} {...rest}/>
 		</div>
 	)
 }

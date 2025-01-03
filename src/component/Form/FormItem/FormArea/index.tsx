@@ -10,7 +10,7 @@ export const FormArea:FC<FormAreaProps & TextareaHTMLAttributes<HTMLTextAreaElem
  label,
  ...rest
 }) => {
-	const { setFieldValue } = useContext(FormContext);
+	const { fieldValues, setFieldValue } = useContext(FormContext);
 	
 	const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
 		if (rest.name) {
@@ -21,7 +21,7 @@ export const FormArea:FC<FormAreaProps & TextareaHTMLAttributes<HTMLTextAreaElem
 	return (
 		<div className={styles["form-text-area"]}>
 			<label>{label}</label><br/>
-			<textarea onChange={handleChange} {...rest}/>
+			<textarea value={fieldValues[rest.name ?? ""]} onChange={handleChange} {...rest}/>
 		</div>
 	)
 }

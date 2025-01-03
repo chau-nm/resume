@@ -1,13 +1,15 @@
 import {FC, useContext, useMemo} from "react";
 import {Route, Routes} from "react-router-dom";
+import {CV as CV_PATH, ROOT} from "./common/path";
+import {ThemeContext} from "./theme/ThemeContext";
+import {ThemeEnum} from "./theme/themeEnum";
+import classNames from "classnames";
 import "./App.scss";
+
 import Main from "./feature/main";
 import PageNotFound from "./feature/404";
-import {CV as CV_PATH, ROOT} from "./common/path";
 import CV from "./feature/cv";
-import {ThemeContext} from "./theme/ThemeContext";
-import classNames from "classnames";
-import {ThemeEnum} from "./theme/themeEnum";
+import {ToastContainer} from "react-toastify";
 
 const App: FC = () => {
 	
@@ -31,6 +33,7 @@ const App: FC = () => {
 				<Route path={CV_PATH} element={<CV />} />
 				<Route path="*" element={<PageNotFound />} />
 			</Routes>
+			<ToastContainer />
 		</div>
 	);
 };

@@ -75,6 +75,10 @@
   "contact": {
     "title": "CONTACT",
     "sendFeedback": "SEND FEEDBACK",
+    "requiredError": "{{fieldName}} is required.",
+    "notValidEmail": "Email is not valid.",
+    "sendingFeedbackMail": "Sending feedback mail...",
+    "sentFeedbackMail": "Sent feedback mail.",
     "field": {
       "name": {
         "label": "Your name",

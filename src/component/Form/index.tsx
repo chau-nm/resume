@@ -1,6 +1,4 @@
 import {FC, FormEvent, FormHTMLAttributes, PropsWithChildren, useState} from "react";
-import classNames from "classnames";
-import styles from "./form.module.scss";
 import {FormContext} from "./FormContext";
 
 type FormProps = {
@@ -27,6 +25,7 @@ const Form:FC<FormProps & PropsWithChildren & FormHTMLAttributes<HTMLFormElement
 	
 	const submit = (e: FormEvent) => {
 		e.preventDefault();
+		setNewFieldValues({});
 		handleSubmit?.(fieldValues);
 	}
 	
@@ -38,7 +37,6 @@ const Form:FC<FormProps & PropsWithChildren & FormHTMLAttributes<HTMLFormElement
 		}}>
 			<form
 				{...rest}
-				className={classNames(styles.form, rest.className)}
 				onSubmit={submit}
 			>
 				{children}

@@ -27,6 +27,29 @@
   }
 }
 
+.loading {
+  opacity: 0.5;
+
+  &:before {
+    animation: loading 1s infinite ease-in-out;
+
+    @keyframes loading {
+      0% {
+        left: -100%;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+      }
+      50% {
+        left: 100%;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+      }
+      100% {
+        left: -100%;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+      }
+    }
+  }
+}
+
 :global(.theme-dark) {
   .button {
     background: linear-gradient(135deg, #1E90FF, #4CAF50);
@@ -40,6 +63,7 @@
 :global(.theme-light) {
   .button {
     background: linear-gradient(to right, #004080, #007f5c);
+    color: #FFFFFF;
 
     &:hover {
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
