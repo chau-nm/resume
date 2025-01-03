@@ -41,7 +41,7 @@ export const SkillBlock: FC<SkillBlockProps> = ({
 				<p>{content}</p>
 			</div>
 			<div
-				className={styles.toggle}
+				className={styles["toggle-button"]}
 				onClick={toggle}
 			>
 				{

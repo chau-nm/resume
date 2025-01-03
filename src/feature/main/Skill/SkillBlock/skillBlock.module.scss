@@ -17,7 +17,6 @@
         max-height: 220px;
         overflow: hidden;
         mask-image: linear-gradient(#000000 20%, transparent);
-        transition: all 1s;
 
         &.toggle {
             max-height: unset;
@@ -30,7 +29,7 @@
         }
     }
 
-    .toggle {
+    .toggle-button {
         display: flex;
         justify-content: center;
         margin: 20px 0;
@@ -49,6 +48,8 @@
             }
         }
     }
+
+
 }
 
 :global(.theme-dark) {
