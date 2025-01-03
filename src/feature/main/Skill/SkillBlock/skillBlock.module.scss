@@ -14,9 +14,39 @@
 
     .content {
         text-align: justify;
-        
+        max-height: 220px;
+        overflow: hidden;
+        mask-image: linear-gradient(#000000 20%, transparent);
+        transition: all 1s;
+
+        &.toggle {
+            max-height: unset;
+            mask-image: none;
+            transition: all 1s;
+        }
+
         p{
             font-size: 1.3rem;
+        }
+    }
+
+    .toggle {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+
+        span {
+            background: linear-gradient(135deg, #1E90FF, #32CD32);
+            background-clip: text;
+            color: transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
 }
