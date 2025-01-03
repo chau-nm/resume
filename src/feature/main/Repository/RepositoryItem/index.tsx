@@ -1,6 +1,7 @@
 import {FC, ReactNode} from "react";
 import styles from "./repositoryItem.module.scss";
 import {DoubleLeftOutline, DoubleRightOutline} from "assets/icons";
+import {useTranslation} from "react-i18next";
 
 type RepositoryItemProps = {
 	name: string;
@@ -15,6 +16,8 @@ export const RepositoryItem: FC<RepositoryItemProps> = ({
 	description,
 	technilogies
 }) => {
+	const {t} = useTranslation();
+	
 	return (
 		<div className={styles["repository-item"]}>
 			<div className={styles.name}>
@@ -36,7 +39,7 @@ export const RepositoryItem: FC<RepositoryItemProps> = ({
 				<div className={styles["view-button"]}>
 					<a href={link}>
 						<DoubleRightOutline className={styles["double-left"]}/>
-						<span> View </span>
+						<span style={{whiteSpace: "nowrap"}}> {t("repository.view")} </span>
 						<DoubleLeftOutline className={styles["double-right"]}/>
 					</a>
 				</div>

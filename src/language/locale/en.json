@@ -27,5 +27,89 @@
     "title": "SKILL",
     "softwareDeveloper": "As a Software Developer, I specialize in designing, coding, and maintaining software applications that meet user needs and enhance operational efficiency. My expertise spans various programming languages and frameworks, allowing me to create robust, scalable solutions. I am adept at collaborating with cross-functional teams to gather requirements, troubleshoot issues, and implement innovative features. My commitment to best practices in software development, including version control, testing, and documentation, ensures high-quality deliverables. I am passionate about continuous learning and staying updated with industry trends to leverage the latest technologies in my projects.",
     "webDevelopment": "As a Web Developer, I focus on creating dynamic and responsive web applications that deliver exceptional user experiences. My expertise includes HTML, CSS, JavaScript and Java, along with frameworks like ReactJS and Spring. I am skilled in both front-end and back-end development, allowing me to build seamless interfaces and robust server-side functionalities. Collaborating closely with designers and clients, I strive to translate requirements into engaging websites that meet business goals. I am passionate about web standards, accessibility, and performance optimization, ensuring that my projects are not only visually appealing but also user-friendly across all devices."
+  },
+  "experience": {
+    "title": "EXPERIENCE",
+    "field": {
+      "projectFeature": "Project features",
+      "projectTechnology": "Project technologies",
+      "teamSize": "Team size",
+      "role": "Role",
+      "issues": "Issues",
+      "result": "Result",
+      "detail": "Detail"
+    },
+    "shoppingSystem": {
+      "summary": "A trial project is assigned by the mentor to assess individual capabilities.",
+      "role": "Receive detailed design from the mentor, then proceed with coding and testing.",
+      "result": "I completed this project in about two weeks and received feedback from my mentor that I learn and adapt quickly."
+    },
+    "urikataSystem": {
+      "summary": "This was a real project where my mentor assigned me specific functionalities to implement.",
+      "role": "I received a source code that had several functionalities removed and detailed designs of those . I completed these functionalities and delivered the final work to my mentor.",
+      "result": "I completed the project in about two weeks and was offered a full-time position early."
+    },
+    "knowledgePortal": {
+      "summary": "This project provides services for universities in Japan.\nAt the beginning of this project, I was lucky to participate as an intern with four colleagues.\nWe finished our internship and have been contracted by the client ever since.",
+      "role": "My client will create issues related to the system's functionalities on GitHub Issues. These will include UX and UI designs, as well as the logic of the features. I will complete these issues and deliver them back to the client.",
+      "issues": "Single sign-on with SAML protocol using Keycloak IDP, Multiple-language using i18next and DeepL API, Content Management System with EditorJS, Optimizing the system's processing, Update version of library, Additional operations of the system,etc.",
+      "result": "I have effectively completed all the tasks assigned to me and received excellent feedback from my leader. The client acknowledged our contributions and has renewed the contract during our working relationship. Furthermore, the client has entrusted me with additional large-scale projects."
+    },
+    "knowledgePortalGateway": {
+      "summary": "An IoT project centered around using a QR code scanner to control door access.",
+      "role": "Develop the device's operations according to the client's design as outlined in Notion.",
+      "result": "I have completed the functionalities requested by the client."
+    }
+  },
+  "repository": {
+    "title": "REPOSITORY",
+    "view": "View detail",
+    "more": "MORE",
+    "tetrisGame": "Tetris game is created by Java Swing. Using design patterns like: Observer, Strategy, Factory.",
+    "minesweeperJava": "Minesweeper game is created by Java Swing.",
+    "uiProblems": "I'm using this repository to practice UI coding.",
+    "leetcodeProblems": "I'm using this repo to solve problems on LeetCode.",
+    "algorithms": "I'm using this repo to practice data structures and algorithms.",
+    "kltn": "This is my graduation thesis project."
+  },
+  "contact": {
+    "title": "CONTACT",
+    "sendFeedback": "SEND FEEDBACK",
+    "field": {
+      "name": {
+        "label": "Your name",
+        "placehoder": "Please enter your name"
+      },
+      "emailAddress": {
+        "label": "Email address"
+      },
+      "subject": {
+        "label": "Subject",
+        "placehoder": "Please enter your subject"
+      },
+      "message": {
+        "label": "Message",
+        "placehoder": "Please enter your message"
+      }
+    }
+  },
+  "footer": {
+    "navigation": {
+      "title": "Navigation",
+      "home": "Home",
+      "about": "About",
+      "skill": "Skill",
+      "experience": "Experience",
+      "repository": "Repository",
+      "contact": "Contact"
+    },
+    "information": {
+      "title": "Information",
+      "address": "Binh Dinh Province"
+    },
+    "maxim": {
+      "greeting": "I’m Chau, a software developer.",
+      "collaborate": "I’m very pleased to collaborate with you."
+    }
   }
 }

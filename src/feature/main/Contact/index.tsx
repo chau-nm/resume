@@ -6,8 +6,11 @@ import styles from "./contact.module.scss";
 import emailjs from '@emailjs/browser';
 import mailConfig from "mail/config.json";
 import {isEmail} from "common/util";
+import {useTranslation} from "react-i18next";
 
 const Contact: FC = () => {
+	const {t} = useTranslation();
+	
 	const handleSubmit = (fieldValues: Record<string, any>) => {
 		if (!isValid(fieldValues)) {
 			return;
@@ -80,14 +83,14 @@ const Contact: FC = () => {
 	}
 	
 	return (
-		<SectionWrapper sectionId={"contact"} title={"Contact"}>
+		<SectionWrapper sectionId={"contact"} title={t("contact.title")}>
 			<div className={styles["form-wrapper"]}>
 				<Form handleSubmit={handleSubmit}>
-					<FormInput label={"Name"} name={"name"} placeholder={"Please enter your name"}/>
-					<FormInput label={"Email Address"} name={"email"} placeholder={"example@example.com"}/>
-					<FormInput label={"Subject"} name={"subject"} placeholder={"Please enter your subject"}/>
-					<FormArea label={"Message"} name={"message"} placeholder={"Please enter your message"}/>
-					<FormSubmit> SEND FEEDBACK </FormSubmit>
+					<FormInput label={t("contact.field.name.label")} name={"name"} placeholder={t("contact.field.name.placehoder")}/>
+					<FormInput label={t("contact.field.email.label")} name={"email"} placeholder={"example@example.com"}/>
+					<FormInput label={t("contact.field.subject.label")} name={"subject"} placeholder={t("contact.field.subject.placehoder")}/>
+					<FormArea label={t("contact.field.message.label")} name={"message"} placeholder={t("contact.field.message.placehoder")}/>
+					<FormSubmit> {t("contact.sendFeedback")} </FormSubmit>
 				</Form>
 			</div>
 		</SectionWrapper>

@@ -7,15 +7,15 @@ import {
 	Tetris,
 	TypeScriptLogo
 } from "assets/images/logo";
+import {TFunction} from "i18next";
 
-export const data = [
+export const getData = (t: TFunction) => [
 	{
 		name: "TetrisGame",
 		description: (
 			<p>
 				<img src={Tetris} alt={""} height={15}/> {" "}
-				Tetris game is created by Java Swing. <br/>
-				Using design patterns like: Observer, Strategy, Factory.
+				{t("repository.tetrisGame")}
 			</p>
 		),
 		technologies: [JavaSkill],
@@ -26,7 +26,7 @@ export const data = [
 		description: (
 			<p>
 				<img src={Minesweeper} alt={""} height={15}/> {" "}
-				Minesweeper game is created by Java Swing.
+				{t("repository.minesweeperJava")}
 			</p>
 		),
 		technologies: [JavaSkill],
@@ -34,25 +34,25 @@ export const data = [
 	},
 	{
 		name: "ui_problems",
-		description: "I'm using this repository to practice UI coding.",
+		description: t("repository.uiProblems"),
 		technologies: [HTMLLogo, CSSLogo, JavaScriptLogo],
 		link: "https://github.com/chau-nm/ui_problems"
 	},
 	{
 		name: "leetcode_problems",
-		description: "I'm using this repo to solve problems on LeetCode.",
+		description: t("repository.leetcodeProblems"),
 		technologies: [JavaSkill, TypeScriptLogo],
 		link: "https://github.com/chau-nm/leetcode_problems"
 	},
 	{
 		name: "algorithms",
-		description: "I'm using this repo to practice data structures and algorithms.",
+		description: t("repository.algorithms"),
 		technologies: [JavaSkill, TypeScriptLogo],
 		link: "https://github.com/chau-nm/algorithms"
 	},
 	{
 		name: "kltn",
-		description: "This is my graduation thesis project.",
+		description: t("repository.kltn"),
 		technologies: [ReactLogo, SpringLogo, MySQLLogo],
 		link: "https://github.com/chau-nm/kltn"
 	}

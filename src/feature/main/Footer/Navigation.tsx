@@ -1,37 +1,48 @@
 import {FC} from "react";
 import styles from "./footer.module.scss";
 import {Link} from "react-scroll";
-import {ABOUT, ALBUM, EXPERIENCE, HOME, REPOSITORY} from "../sections";
+import {ABOUT, CONTACT, EXPERIENCE, HOME, REPOSITORY, SKILL} from "../sections";
+import {useTranslation} from "react-i18next";
 
-export const Navigation: FC = () => (
-  <>
-    <div className={styles["title"]}>Navigation</div>
-    <ul>
-      <li>
-        <Link to={HOME} smooth duration={500}>
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link to={ABOUT} smooth duration={500}>
-          About
-        </Link>
-      </li>
-      <li>
-        <Link to={ALBUM} smooth duration={500}>
-          Album
-        </Link>
-      </li>
-      <li>
-        <Link to={EXPERIENCE} smooth duration={500}>
-          Experience
-        </Link>
-      </li>
-      <li>
-        <Link to={REPOSITORY} smooth duration={500}>
-          Repository
-        </Link>
-      </li>
-    </ul>
-  </>
-);
+export const Navigation: FC = () => {
+  
+  const {t} = useTranslation();
+  
+  return (
+    <>
+      <div className={styles["title"]}>{t("footer.navigation.title")}</div>
+      <ul>
+        <li>
+          <Link to={HOME} smooth duration={500}>
+            {t("footer.navigation.home")}
+          </Link>
+        </li>
+        <li>
+          <Link to={ABOUT} smooth duration={500}>
+            {t("footer.navigation.about")}
+          </Link>
+        </li>
+        <li>
+          <Link to={SKILL} smooth duration={500}>
+            {t("footer.navigation.skill")}
+          </Link>
+        </li>
+        <li>
+          <Link to={EXPERIENCE} smooth duration={500}>
+            {t("footer.navigation.experience")}
+          </Link>
+        </li>
+        <li>
+          <Link to={REPOSITORY} smooth duration={500}>
+            {t("footer.navigation.repository")}
+          </Link>
+        </li>
+        <li>
+          <Link to={CONTACT} smooth duration={500}>
+            {t("footer.navigation.contact")}
+          </Link>
+        </li>
+      </ul>
+    </>
+  )
+}

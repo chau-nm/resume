@@ -1,16 +1,20 @@
-import {FC, useRef} from "react";
+import {FC, useMemo, useRef} from "react";
 import {SectionWrapper} from "../SectionWrapper";
-import {data} from "./data";
+import {getData} from "./data";
 import {RepositoryItem} from "./RepositoryItem";
 import styles from "./repository.module.scss";
 import {useGSAP} from "@gsap/react";
 import {tweenFromToScroll} from "libs/gsap";
 import {ButtonLink} from "component/ButtonLink";
+import {useTranslation} from "react-i18next";
 
 const Repository: FC = () => {
 	
+	const {t} = useTranslation();
 	const repoRef = useRef(null);
 	const moreButtonRef = useRef(null);
+	
+	const data = useMemo(() => getData(t), [t]);
 	
 	useGSAP(() => {
 		applyRepoTween();
@@ -48,7 +52,7 @@ const Repository: FC = () => {
 	}
 	
 	return (
-		<SectionWrapper sectionId="repository" title="Repository">
+		<SectionWrapper sectionId="repository" title={t("repository.title")}>
 			<div ref={repoRef} className={styles["item-wrapper"]}>
 				{
 					data.map((repo, index) => (
@@ -63,7 +67,7 @@ const Repository: FC = () => {
 				}
 			</div>
 			<div ref={moreButtonRef} className={styles.more}>
-				<ButtonLink href={"https://github.com/chau-nm"}>MORE</ButtonLink>
+				<ButtonLink href={"https://github.com/chau-nm"}>{t("repository.more")}</ButtonLink>
 			</div>
 		</SectionWrapper>
 	);
