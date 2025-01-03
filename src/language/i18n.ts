@@ -14,7 +14,6 @@ i18n
 	.use(I18nextBrowserLanguageDetector)
 	.init({
 		resources,
-		lng: "en",
 		fallbackLng: "en",
 		supportedLngs: ['en', 'vi'],
 		interpolation: {
