@@ -1,7 +1,8 @@
 ### CHAU-NM'S RESUME
 Deployment: https://chau-nm.github.io/resume
 
-### Preview
+## Preview
+![portfolio demo](src/assets/images/demo.gif)
 
 
 ## Installation
