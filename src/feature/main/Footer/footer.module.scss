@@ -97,6 +97,12 @@
             height: 100%;
           }
         }
+
+        :global(.zalo) {
+          padding: 0;
+          width: 32px;
+          height: 32px;
+        }
       }
     }
   }
