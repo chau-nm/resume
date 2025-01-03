@@ -1,4 +1,4 @@
-import {FC, useContext, useMemo} from "react";
+import {FC, useContext, useEffect, useMemo, useState} from "react";
 import {Route, Routes} from "react-router-dom";
 import {CV as CV_PATH, ROOT} from "./common/path";
 import {ThemeContext} from "./theme/ThemeContext";
@@ -10,9 +10,10 @@ import Main from "./feature/main";
 import PageNotFound from "./feature/404";
 import CV from "./feature/cv";
 import {ToastContainer} from "react-toastify";
+import Welcome from "./feature/welcome";
 
 const App: FC = () => {
-	
+	const [isLoading, setLoading] = useState(true);
 	const {theme} = useContext(ThemeContext);
 	
 	const themeClassName = useMemo(() => {
@@ -26,6 +27,15 @@ const App: FC = () => {
 		}
 	}, [theme]);
 	
+	useEffect(() => {
+		setTimeout(() => setLoading(false), 9000);
+	}, []);
+	
+	if (isLoading) {
+		return (
+			<Welcome />
+		)
+	}
 	return (
 		<div className={classNames("app", themeClassName )}>
 			<Routes>
