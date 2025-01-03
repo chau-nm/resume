@@ -1,5 +1,4 @@
 import {FC, useRef, useState} from "react";
-import {ProcessEnum} from "./processEnum";
 import styles from "./process.module.scss";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
@@ -30,7 +29,7 @@ export const Process:FC = () => {
 				duration: 5,
 				ease: "circ.inOut",
 				onUpdate: () => {
-					const newPercent = (processCurrentRef.current?.clientWidth ?? 0) / ProcessEnum.processWidth * 100;
+					const newPercent = (processCurrentRef.current?.clientWidth ?? 1) / (processRef.current?.clientWidth ?? 1) * 100;
 					setPercent(Math.round(newPercent * 100) / 100);
 				}
 			}
@@ -48,7 +47,7 @@ export const Process:FC = () => {
 					{percent}%
 				</i>
 			</div>
-			<div ref={processRef} className={styles.process} style={{width: ProcessEnum.processWidth}}>
+			<div ref={processRef} className={styles.process}>
 				<div ref={processCurrentRef} className={styles.current}>
 				</div>
 			</div>

@@ -28,7 +28,7 @@ const App: FC = () => {
 	}, [theme]);
 	
 	useEffect(() => {
-		setTimeout(() => setLoading(false), 9000);
+		setTimeout(() => setLoading(false), 10500);
 	}, []);
 	
 	if (isLoading) {

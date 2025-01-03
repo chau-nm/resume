@@ -28,7 +28,7 @@ const Welcome:FC = () => {
 		
 		timeline.to(
 			ref.current,
-			{opacity: 0, scale: 0, delay: 7.5}
+			{opacity: 0, scale: 0, delay: 7}
 		)
 	})
 

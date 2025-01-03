@@ -39,9 +39,14 @@
 
   .process {
     height: 4px;
+    width: 50vw;
     background: #b6b6b6;
     border-radius: 30%;
     overflow: hidden;
+
+    @media screen and (max-width: 1080px)  {
+      width: 65vw;
+    }
 
     .current {
       height: 4px;

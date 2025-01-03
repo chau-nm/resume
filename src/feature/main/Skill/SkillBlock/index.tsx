@@ -35,7 +35,7 @@ export const SkillBlock: FC<SkillBlockProps> = ({
 			{x: 50 * (position ? -1 : 1), opacity: 0},
 			{x: 0, opacity: 1, duration: 1}
 		)
-		if (lightRef) {
+		if (lightRef.current) {
 			timeline.fromTo(
 				lightRef.current,
 				{opacity: 0},
