@@ -2,7 +2,10 @@ import {FC, FormEvent, FormHTMLAttributes, PropsWithChildren, useState} from "re
 import {FormContext} from "./FormContext";
 
 type FormProps = {
-	handleSubmit?: (fieldValues: Record<string, any>) => void;
+	handleSubmit?: (
+		fieldValues: Record<string, any>,
+		resetFields: () => void
+	) => void;
 }
 
 const Form:FC<FormProps & PropsWithChildren & FormHTMLAttributes<HTMLFormElement>> = ({
@@ -23,10 +26,13 @@ const Form:FC<FormProps & PropsWithChildren & FormHTMLAttributes<HTMLFormElement
 		});
 	}
 	
+	const resetFields = () => {
+		setNewFieldValues({});
+	}
+	
 	const submit = (e: FormEvent) => {
 		e.preventDefault();
-		setNewFieldValues({});
-		handleSubmit?.(fieldValues);
+		handleSubmit?.(fieldValues, resetFields);
 	}
 	
 	return (

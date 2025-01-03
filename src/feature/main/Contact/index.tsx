@@ -15,13 +15,13 @@ const Contact: FC = () => {
 	const [isSendingMail, setSendingMail] = useState<boolean>(false);
 	const {t} = useTranslation();
 	
-	const handleSubmit = (fieldValues: Record<string, any>) => {
+	const handleSubmit = (fieldValues: Record<string, any>, resetFields: () => void) => {
 		setSendingMail(true);
 		if (!isValid(fieldValues)) {
 			setSendingMail(false);
 			return;
 		}
-		sendMailFeedback(fieldValues);
+		sendMailFeedback(fieldValues, resetFields);
 	}
 	
 	const isValid = (fieldValues: Record<string, any>) => {
@@ -62,7 +62,7 @@ const Contact: FC = () => {
 		});
 	}
 	
-	const sendMailFeedback = (fieldValues: Record<string, any>) => {
+	const sendMailFeedback = (fieldValues: Record<string, any>, resetFields: () => void) => {
 		toast(t("contact.sendingFeedbackMail"), {
 			theme: "colored",
 			type: "info"
@@ -84,6 +84,7 @@ const Contact: FC = () => {
 						type: "success",
 					});
 					setSendingMail(false);
+					resetFields();
 					await sendMailThankyou(fieldValues);
 				},
 				(error) => {

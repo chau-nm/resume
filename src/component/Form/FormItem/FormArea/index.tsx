@@ -4,24 +4,26 @@ import styles from "./formArea.module.scss";
 
 type FormAreaProps = {
 	label: string;
+	name: string;
 }
 
 export const FormArea:FC<FormAreaProps & TextareaHTMLAttributes<HTMLTextAreaElement>> = ({
- label,
+  label,
+	name,
  ...rest
 }) => {
 	const { fieldValues, setFieldValue } = useContext(FormContext);
 	
 	const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-		if (rest.name) {
-			setFieldValue(rest.name, event.target.value);
+		if (name) {
+			setFieldValue(name, event.target.value);
 		}
 	}
 	
 	return (
 		<div className={styles["form-text-area"]}>
 			<label>{label}</label><br/>
-			<textarea value={fieldValues[rest.name ?? ""]} onChange={handleChange} {...rest}/>
+			<textarea value={fieldValues[name] ?? ""} onChange={handleChange} {...rest}/>
 		</div>
 	)
 }

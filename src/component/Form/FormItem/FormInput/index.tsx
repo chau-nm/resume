@@ -4,24 +4,26 @@ import styles from "./formInput.module.scss";
 
 type FormInputProps = {
 	label: string;
+	name: string;
 }
 
 export const FormInput:FC<FormInputProps & InputHTMLAttributes<HTMLInputElement>> = ({
 	label,
+	name,
 	...rest
 }) => {
 	const { fieldValues, setFieldValue } = useContext(FormContext);
 	
 	const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-		if (rest.name) {
-			setFieldValue(rest.name, event.target.value);
+		if (name) {
+			setFieldValue(name, event.target.value);
 		}
 	}
 	
 	return (
 		<div className={styles["form-input"]}>
 			<label>{label}</label><br/>
-			<input value={fieldValues[rest.name ?? ""]} onChange={handleChange} {...rest}/>
+			<input value={fieldValues[name] ?? ""} onChange={handleChange} {...rest}/>
 		</div>
 	)
 }
