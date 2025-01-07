@@ -1,6 +1,10 @@
 ### CHAU-NM'S RESUME
 Deployment: https://chau-nm.github.io/resume
 
+## Preview
+![portfolio demo](src/assets/images/demo.gif)
+
+
 ## Installation
 
 ### 1. Clone git repository:
@@ -11,6 +15,20 @@ Deployment: https://chau-nm.github.io/resume
 
     cd your-dir/resume
     yarn install
+
+### 3. Set mail config:
+
+   - Create file "src/mail/config.json"
+   - Copy file content from "src/mail/config.dev.json" to "src/mail/config.json"
+
+    {
+        "mailService": "MAIL SERVICE FROM EMAILJS",
+        "mailThankYouTemplate": "TEMPLATE FROM EMAILJS",
+        "mailFeedbackTemplate": "TEMPLATE FROM EMAILJS",
+        "publicKey": "PUBLIC KEY FROM EMAILJS"
+    }
+
+   - Edit config file "src/mail/config.json" using your EmailJS Config
    
-### 3. Start
+### 4. Start
     yarn start
