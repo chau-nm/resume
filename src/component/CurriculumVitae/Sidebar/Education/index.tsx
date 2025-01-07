@@ -8,7 +8,7 @@ export const Education: FC = () => {
 			<EducationItem startYear={2019} endYear={2023} university={"Nong Lam University"}>
 				<ul>
 					<li>Information Technology</li>
-					<li>GPA: 3.19</li>
+					<li>GPA: 3.19/4.0</li>
 				</ul>
 			</EducationItem>
 		</Section>
